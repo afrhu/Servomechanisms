@@ -3,7 +3,7 @@ model PRAnalysis
   extends Modelica.Icons.Example;
   extends Servomechanisms.Utilities.Visual3d;
   extends Servomechanisms.Examples.PRServomechanism.Data;
-  Servomechanisms.Control.FlowerTrayectory flowertrayectory1(a = a, period = period, xc = xc, yc = yc, startTime = 1) annotation(Placement(transformation(origin = {-84.9745,-8.06099}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Control.FlowerTrajectory flowertrajectory1(a = a, period = period, xc = xc, yc = yc, startTime = 1) annotation(Placement(transformation(origin = {-84.9745,-8.06099}, extent = {{-10,-10},{10,10}})));
   Servomechanisms.Control.PRInverseKinematics prinversekinematics1(l1 = l1, l2 = l2) annotation(Placement(transformation(origin = {-55.2445,-7.46932}, extent = {{-10,-10},{10,10}})));
   Servomechanisms.Mechanism.PR pr1(boxLength1 = l1, boxWidth1 = w1, boxHeight1 = h1, boxLength2 = l2, boxWidth2 = w2, boxHeight2 = h2, density1 = d1, density2 = d2, g = 0) annotation(Placement(transformation(origin = {118.322,-7.82686}, extent = {{-25.4947,-25.4947},{25.4947,25.4947}})));
   Servomechanisms.Electrical.SignalDCMotor signaldcmotor2(R = R, L = L, kt = k, J = J) annotation(Placement(transformation(origin = {26.665,38.9497}, extent = {{-10,-10},{10,10}})));
@@ -27,8 +27,8 @@ equation
   connect(signaldcmotor2.flange_b,idealgear2.flange_a) annotation(Line(points = {{36.665,38.9497},{50.8834,38.9497},{50.8834,38.9669},{50.6359,38.9669}}));
   connect(PID2.y,signaldcmotor2.u) annotation(Line(points = {{3.94126,38.4813},{15.9011,38.4813},{15.9011,38.9497},{16.665,38.9497}}));
   connect(PID2.u_s,prinversekinematics1.y[2]) annotation(Line(points = {{-19.0587,38.4813},{-44.1696,38.4813},{-44.1696,-7.46932},{-44.2445,-7.46932}}));
-  connect(flowertrayectory1.y[2],prinversekinematics1.u[2]) annotation(Line(points = {{-73.9745,-8.06099},{-68.5512,-8.06099},{-68.5512,-8.12721},{-68.5512,-8.12721}}));
-  connect(flowertrayectory1.y[1],prinversekinematics1.u[1]) annotation(Line(points = {{-73.9745,-8.06099},{-68.9046,-8.06099},{-68.9046,-7.06714},{-68.9046,-7.06714}}));
+  connect(flowertrajectory1.y[2],prinversekinematics1.u[2]) annotation(Line(points = {{-73.9745,-8.06099},{-68.5512,-8.06099},{-68.5512,-8.12721},{-68.5512,-8.12721}}));
+  connect(flowertrajectory1.y[1],prinversekinematics1.u[1]) annotation(Line(points = {{-73.9745,-8.06099},{-68.9046,-8.06099},{-68.9046,-7.06714},{-68.9046,-7.06714}}));
   annotation( experiment(StartTime = 0, StopTime = 61, Tolerance = 0.000001), Diagram(coordinateSystem(extent = {{-100,-100},{150,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {28.6219,-61.4841}, lineColor = {0,85,255}, fillColor = {170,170,255}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-54.417,33.5689},{54.417,-33.5689}}),Rectangle(origin = {25.6537,29.1873}, lineColor = {0,85,255}, fillColor = {170,170,255}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-54.417,33.5689},{54.417,-33.5689}}),Rectangle(origin = {-44.311,-24.1696}, lineColor = {255,170,0}, fillColor = {255,255,127}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-54.417,33.5689},{2.82685,3.53357}})}));
   annotation(Documentation(info = "<html>
 <head>
@@ -39,7 +39,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-In this model the trayectory tracking for PR servomechanisms is tested using PID block and signal DC motor.
+In this model the trajectory tracking for PR servomechanisms is tested using PID block and signal DC motor.
 </p>
 
 <h4>Example</h4>

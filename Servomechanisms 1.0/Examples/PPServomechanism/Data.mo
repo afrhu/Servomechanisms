@@ -8,7 +8,7 @@ record Data
   parameter Real l1 = 0.2,w1 = 0.02,h1 = 0.005,d1 = 400,min1 = -0.2,max1 = 0;
   //Parameters of link 2
   parameter Real l2 = 0.2,w2 = 0.02,h2 = 0.005,d2 = 400,min2 = -0.2,max2 = 0;
-  //Parameters of circle trayectory
+  //Parameters of circle trajectory
   parameter Real r = 0.08,xc = 0.1,yc = 0.1;
   //Raduction parameters
   parameter Real ratio1 = 5,ratio2 = 5;

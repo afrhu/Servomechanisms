@@ -2,7 +2,7 @@ within Servomechanisms.Examples.RRServomechanism;
 model RRTorqueAnalysis
   extends Modelica.Icons.Example;
   extends Servomechanisms.Examples.RRServomechanism.Data;
-  Servomechanisms.Control.CircleTrayectory circletrayectory1(r = r, xc = xc, yc = yc, period = period) annotation(Placement(transformation(origin = {-86.3472,13.0964}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Control.CircleTrajectory circletrajectory1(r = r, xc = xc, yc = yc, period = period) annotation(Placement(transformation(origin = {-86.3472,13.0964}, extent = {{-10,-10},{10,10}})));
   Servomechanisms.Control.RRInverseKinematics rrinversekinematics1(l1 = l1, l2 = l2, elbow = -1) annotation(Placement(transformation(origin = {-55.653,13.0692}, extent = {{-10,-10},{10,10}})));
   Modelica.Blocks.Math.Gain gain2(k = ratio2) annotation(Placement(transformation(origin = {-31.516,46.2842}, extent = {{-10,-10},{10,10}})));
   Modelica.Blocks.Math.Gain gain1(k = ratio1) annotation(Placement(transformation(origin = {-31.948,-24.1313}, extent = {{-10,-10},{10,10}})));
@@ -28,8 +28,8 @@ equation
   connect(gain1.y,position1.phi_ref) annotation(Line(points = {{-20.948,-24.1313},{-12.3675,-24.1313},{-12.3675,-24.0283},{-12.3675,-24.0283}}));
   connect(rrinversekinematics1.y[2],gain2.u) annotation(Line(points = {{-44.653,13.0692},{-43.1095,13.0692},{-43.1095,45.583},{-43.1095,45.583}}));
   connect(rrinversekinematics1.y[1],gain1.u) annotation(Line(points = {{-44.653,13.0692},{-44.1696,13.0692},{-44.1696,-24.735},{-44.1696,-24.735}}));
-  connect(circletrayectory1.y[2],rrinversekinematics1.u[2]) annotation(Line(points = {{-75.3472,13.0964},{-67.8445,13.0964},{-67.8445,13.0742},{-67.8445,13.0742}}));
-  connect(circletrayectory1.y[1],rrinversekinematics1.u[1]) annotation(Line(points = {{-75.3472,13.0964},{-67.1378,13.0964},{-67.1378,12.7208},{-67.1378,12.7208}}));
+  connect(circletrajectory1.y[2],rrinversekinematics1.u[2]) annotation(Line(points = {{-75.3472,13.0964},{-67.8445,13.0964},{-67.8445,13.0742},{-67.8445,13.0742}}));
+  connect(circletrajectory1.y[1],rrinversekinematics1.u[1]) annotation(Line(points = {{-75.3472,13.0964},{-67.1378,13.0964},{-67.1378,12.7208},{-67.1378,12.7208}}));
   annotation( Documentation(info = "<html>
 <head>
 <style type=\"text/css\">
@@ -45,12 +45,12 @@ With this configuration the dynamic of the system can be calculated.
 
 <h4>Implementation</h4>
 <p>
-The block of the trayectory is used as input.
+The block of the trajectory is used as input.
 The outputs of this block are connected to the inputs of the block of inverse kinematics.
-In this way the coordinates of the trayectory are transform into joint variables.
+In this way the coordinates of the trajectory are transform into joint variables.
 </p>
 <p>
-Utilizing the position source the mechanisms will follow the trayectory and with the acausal modelling it is possible to obtain the torque needed in each joint.
+Utilizing the position source the mechanisms will follow the trajectory and with the acausal modelling it is possible to obtain the torque needed in each joint.
 If a reduction is used, then the joint variables should be multiplied with the parameter ratio of the idealgear block in order to obtain the expected result.
 </p>
 

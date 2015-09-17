@@ -6,7 +6,7 @@ record Data
   parameter Real l1 = 0.3,w1 = 0.01,h1 = 0.075,d1 = 888.889,min1 = -0.3,max1 = 0;
   //Parameters of link 2
   parameter Real l2 = 0.085,w2 = 0.02,h2 = 0.005,d2 = 2352.94,min2 = -pi / 2,max2 = pi / 2;
-  //Parameters of flower trayectory
+  //Parameters of flower trajectory
   parameter Real a = 0.075,b = 1 / 8,xc = 0.15,yc = 0;
   //Motor parameters
   parameter Real R = 0.101,L = 0.0000266,k = 0.0115,J = 0.0000119,Voltage = 12;
@@ -40,7 +40,7 @@ Parameters of link 1
 Parameters of link 2
 </li>
 <li>
-Parameters of flower trayectory
+Parameters of flower trajectory
 </li>
 <li>
 Motor parameters

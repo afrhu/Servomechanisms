@@ -11,13 +11,13 @@ model RRPositionControl
   Modelica.Mechanics.Rotational.Components.IdealGear idealgear1(ratio = ratio1) annotation(Placement(transformation(origin = {62.0495,-40.0707}, extent = {{-10,-10},{10,10}})));
   Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(transformation(origin = {29.7527,-74.4877}, extent = {{10,-10},{-10,10}})));
   Servomechanisms.Control.RRInverseKinematics rrinversekinematics1(l1 = l1, l2 = l2) annotation(Placement(transformation(origin = {-50.2487,-8.48059}, extent = {{-10,-10},{10,10}})));
-  Servomechanisms.Control.CircleTrayectory circletrayectory1(r = r, xc = xc, yc = yc, period = period, startTime = 1) annotation(Placement(transformation(origin = {-83.1533,-8.12721}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Control.CircleTrajectory circletrajectory1(r = r, xc = xc, yc = yc, period = period, startTime = 1) annotation(Placement(transformation(origin = {-83.1533,-8.12721}, extent = {{-10,-10},{10,10}})));
   Servomechanisms.Mechanism.RR rr1(boxLength1 = l1, boxWidth1 = w1, boxHeight1 = h1, cylinderLength1 = l1, density1 = d1, boxLength2 = l2, boxWidth2 = w2, boxHeight2 = h2, density2 = d2, g = 9.81) annotation(Placement(transformation(origin = {128.255,-14.6019}, extent = {{-27.2482,-27.2482},{27.2482,27.2482}})));
 equation
   connect(idealgear2.flange_b,rr1.flange_rotational2) annotation(Line(points = {{70.7774,38.5159},{121.78,38.5159},{121.78,2.34192},{121.78,2.34192}}));
   connect(idealgear1.flange_b,rr1.flange_rotational1) annotation(Line(points = {{72.0495,-40.0707},{101.171,-40.0707},{101.171,-18.7354},{101.171,-18.7354}}));
-  connect(circletrayectory1.y[1],rrinversekinematics1.u[1]) annotation(Line(points = {{-72.1533,-8.12721},{-62.7635,-8.12721},{-62.7635,-7.96253},{-62.7635,-7.96253}}));
-  connect(circletrayectory1.y[2],rrinversekinematics1.u[2]) annotation(Line(points = {{-72.1533,-8.12721},{-63.2319,-8.12721},{-63.2319,-8.43091},{-63.2319,-8.43091}}));
+  connect(circletrajectory1.y[1],rrinversekinematics1.u[1]) annotation(Line(points = {{-72.1533,-8.12721},{-62.7635,-8.12721},{-62.7635,-7.96253},{-62.7635,-7.96253}}));
+  connect(circletrajectory1.y[2],rrinversekinematics1.u[2]) annotation(Line(points = {{-72.1533,-8.12721},{-63.2319,-8.12721},{-63.2319,-8.43091},{-63.2319,-8.43091}}));
   connect(PID.u_s,rrinversekinematics1.y[2]) annotation(Line(points = {{-21.5406,37.4558},{-38.8693,37.4558},{-38.8693,-9.18728},{-38.8693,-9.18728}}));
   connect(limpid1.u_s,rrinversekinematics1.y[1]) annotation(Line(points = {{-18.8551,-40.0707},{-38.8693,-40.0707},{-38.8693,-8.83392},{-38.8693,-8.83392}}));
   connect(anglesensor2.phi,PID.u_m) annotation(Line(points = {{16.7739,7.27907},{-10.2473,7.27907},{-10.2473,24.735},{-10.2473,24.735}}));
@@ -38,7 +38,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-In this model the trayectory trackintg for RR servomechanisms is tested using PID block and signal DC motor.
+In this model the trajectory trackintg for RR servomechanisms is tested using PID block and signal DC motor.
 </p>
 
 <h4>Example</h4>

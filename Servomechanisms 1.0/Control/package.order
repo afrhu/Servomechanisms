@@ -1,9 +1,8 @@
 Controller
 PIDControllerDirection
-CircleTrayectory
-FlowerTrayectory
+CircleTrajectory
+FlowerTrajectory
 RRInverseKinematics
 PRInverseKinematics
 RPInversekinematics
 PPInverseKinematics
-

@@ -8,7 +8,7 @@ record Data "RR Servomechanism Data"
   parameter Real l1 = 0.2,w1 = 0.02,h1 = 0.005,d1 = 400,min1 = 0,max1 = pi / 2;
   //Parameters of link 2
   parameter Real l2 = 0.1,w2 = 0.02,h2 = 0.005,d2 = 400,min2 = -pi / 2,max2 = pi / 2;
-  //Parameters of circle trayectory
+  //Parameters of circle trajectory
   parameter Real r = 0.03,xc = 0.25,yc = 0.075;
   //Reduction parameters
   parameter Real ratio1 = 10,ratio2 = 5;
@@ -43,7 +43,7 @@ Parameters of link 1
 Parameters of link 2
 </li>
 <li>
-Parameters of cirle trayectory
+Parameters of cirle trajectory
 </li>
 <li>
 Motor parameters

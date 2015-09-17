@@ -1,5 +1,5 @@
 within Servomechanisms.Control;
-block FlowerTrayectory "Generate the trayectory of a flower from parametric equations"
+block FlowerTrajectory "Generate the trajectory of a flower from parametric equations"
   //Libraries needed
   import Modelica.Math.*;
   //Inheritance
@@ -31,7 +31,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-This blocks generates the x and y coordinates of a flower trayectory with the quadrifolium parametric equation.
+This blocks generates the x and y coordinates of a flower trajectory with the quadrifolium parametric equation.
 </p>
 
 <h4>Implementation</h4>
@@ -55,7 +55,7 @@ The output is an array <b>y</b> where <b>y[1]</b> is the x coordinate and <b>y[2
 To connect the output to other component the user must input the index of the array (1 or 2).
 </li>
 <li>
-The user can change the radius, center, start time and period to complete the trayectory by changing the parameters of the block.
+The user can change the radius, center, start time and period to complete the trajectory by changing the parameters of the block.
 </li>
 </ul>
 
@@ -64,11 +64,11 @@ The user can change the radius, center, start time and period to complete the tr
 <p>
 With the default parameters the plot results will be:
 </p>
-<img src=\"modelica://Servomechanisms/Resources/Images/Control/flowerTrayectory01.png\">
+<img src=\"modelica://Servomechanisms/Resources/Images/Control/flowerTrajectory01.png\">
 <p>
 and with plot parametric:
 </p>
-<img src=\"modelica://Servomechanisms/Resources/Images/Control/flowerTrayectory02.png\">
+<img src=\"modelica://Servomechanisms/Resources/Images/Control/flowerTrajectory02.png\">
 </html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Line(points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = -90, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = 90, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = 180, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier)}));
-end FlowerTrayectory;
+end FlowerTrajectory;
 

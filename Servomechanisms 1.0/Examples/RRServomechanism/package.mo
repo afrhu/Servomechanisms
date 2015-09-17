@@ -10,8 +10,8 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-In this example a planar <strong>Rotational-Rotational (2R)</strong> servomechanism is modeled and simulated for <strong>trayectory tracking</strong>.
-The aproach is <strong>Independent Joint Control</strong> to track a circle trayectory.<br>
+In this example a planar <strong>Rotational-Rotational (2R)</strong> servomechanism is modeled and simulated for <strong>trajectory tracking</strong>.
+The aproach is <strong>Independent Joint Control</strong> to track a circle trajectory.<br>
 The components of the
 <a href=\"modelica://Servomechanisms\">Servomechanisms</a>
 package and the

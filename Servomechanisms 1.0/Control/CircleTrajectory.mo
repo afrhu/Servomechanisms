@@ -1,5 +1,5 @@
 within Servomechanisms.Control;
-model CircleTrayectory "Generate the trayectory of a circle from parametric equations"
+model CircleTrajectory "Generate the trajectory of a circle from parametric equations"
   //Inheritance
   extends Modelica.Blocks.Interfaces.MO(nout = 2);
   //Icon
@@ -33,7 +33,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-This blocks generates the x and y coordinates of a circle trayectory with the circle parametric equation.
+This blocks generates the x and y coordinates of a circle trajectory with the circle parametric equation.
 </p>
 
 <h4>Implementation</h4>
@@ -57,7 +57,7 @@ The output is an array <b>y</b> where <b>y[1]</b> is the x coordinate and <b>y[2
 To connect the output to other component the user must input the index of the array (1 or 2).
 </li>
 <li>
-The user can change the radius, center and the time to complete the circle trayectory by changing the parameters of the block.
+The user can change the radius, center and the time to complete the circle trajectory by changing the parameters of the block.
 </li>
 </ul>
 
@@ -65,11 +65,11 @@ The user can change the radius, center and the time to complete the circle traye
 <p>
 With the default parameters the plot results will be:
 </p>
-<img src=\"modelica://Servomechanisms/Resources/Images/Control/circletrayectory01.png\">
+<img src=\"modelica://Servomechanisms/Resources/Images/Control/circletrajectory01.png\">
 <p>
 and with plot parametric:
 </p>
-<img src=\"modelica://Servomechanisms/Resources/Images/Control/circletrayectory02.png\">
+<img src=\"modelica://Servomechanisms/Resources/Images/Control/circletrajectory02.png\">
 </html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Ellipse(origin = {4.21546,3.74707}, lineColor = {255,0,0}, lineThickness = 1, extent = {{-60,60},{60,-60}}, endAngle = 360)}));
-end CircleTrayectory;
+end CircleTrajectory;
 

@@ -6,7 +6,7 @@ model PRWorkspace
   Modelica.Mechanics.Translational.Sources.Position position1(exact = true) annotation(Placement(transformation(origin = {1.40365,-33.634}, extent = {{-10,-10},{10,10}})));
   Modelica.Mechanics.Rotational.Sources.Position position2(exact = true) annotation(Placement(transformation(origin = {-1.82883,15.2562}, extent = {{-10,-10},{10,10}})));
   Servomechanisms.Mechanism.Workspace2d workspace1(max1 = max1, min2 = min2, max2 = max2, min1 = min1) annotation(Placement(transformation(origin = {-55.5921,-12.0141}, extent = {{-10,-10},{10,10}})));
-  Servomechanisms.Control.FlowerTrayectory flowertrayectory1(xc = xc, b = 2 * Modelica.Constants.pi, a = a, yc = yc) annotation(Placement(transformation(origin = {-54.4476,-59.0164}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Control.FlowerTrajectory flowertrajectory1(xc = xc, b = 2 * Modelica.Constants.pi, a = a, yc = yc) annotation(Placement(transformation(origin = {-54.4476,-59.0164}, extent = {{-10,-10},{10,10}})));
   Servomechanisms.Mechanism.PR pr1(boxLength1 = l1, boxWidth1 = w1, boxHeight1 = h1, density1 = d1, boxLength2 = l2, boxWidth2 = w2, boxHeight2 = h2, density2 = d2, n2 = {0,0,1}) annotation(Placement(transformation(origin = {60.0905,-10.422}, extent = {{-22.595,-22.595},{22.595,22.595}})));
 equation
   connect(position2.phi_ref,workspace1.y[2]) annotation(Line(points = {{-13.8288,15.2562},{-44.8763,15.2562},{-44.8763,-12.3675},{-44.8763,-12.3675}}));
@@ -24,7 +24,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-The purpose of this model is to determine the workspace and possible trayectory of the mechanism.
+The purpose of this model is to determine the workspace and possible trajectory of the mechanism.
 The parameters used are located in the <b>record</b>. This parameters are used as the parameters of each component as needed.
 </p>
 
@@ -47,13 +47,13 @@ component.
 <h4>Notes</h4>
 <ul>
 <li>
-The block flowertrayectory is utilized to verify that the trayectory is within the workspace.
+The block flowertrajectory is utilized to verify that the trajectory is within the workspace.
 </li>
 <li>
 Note that the parameter <b>exact</b> in each position source is <b>true</b> to avoid the minimal frequency.
 </li>
 <li>
-Both, the workspace and flower trayectory are completed in 1 sec.
+Both, the workspace and flower trajectory are completed in 1 sec.
 </li>
 </ul>
 

@@ -41,7 +41,7 @@ The joint variables are determine by:
 <h4>Notes</h4>
 <ul>
 <li>
-The input is an array <b>u</b> where <b>u[1]</b> is the x coordinate and <b>u[2]</b> is the y coordinate of a trayectory located at final frame of the second link.
+The input is an array <b>u</b> where <b>u[1]</b> is the x coordinate and <b>u[2]</b> is the y coordinate of a trajectory located at final frame of the second link.
 To connect a signal to the intput u the user must input the index of the array (1 or 2).
 </li>
 <li>
