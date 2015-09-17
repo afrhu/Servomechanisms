@@ -23,7 +23,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-The purpose of this model is to determine de workspace and possible trayectory of the mechanism.
+The purpose of this model is to determine the workspace and possible trayectory of the mechanism.
 The parameters used are located in the <b>record</b>. This parameters are used as the parameters of each component as needed.
 </p>
 

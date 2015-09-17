@@ -62,7 +62,7 @@ Note that O is the overshot value (for example 0.1) not a porcentual overshoot P
 The PID block <em>controller type</em> must be <strong>.Modelica.Blocks.Types.SimpleController.P</strong> for proportional control.
 </li>
 <li>
-At the moment the K and tau values are obtain after simulating and observing speed responce of motor.
+At the moment the K and tau values are obtain after simulating and observing speed response of motor.
 </li>
 <li>
 At the moment the kp value should be calculated externally, although it could be implemented using a modelica function

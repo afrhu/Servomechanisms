@@ -49,7 +49,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 <h4>General</h4>
 <p>
 The <b>SignMagnitudDrive</b> boolean block is used as a method to
-control de h-bridge with the inputs of PWM and ENABLE (or direction)
+control the h-bridge with the inputs of PWM and ENABLE (or direction)
 comming from the controller. Is the model of the method sign-magnitud.
 </p>
 
