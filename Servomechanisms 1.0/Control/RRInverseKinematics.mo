@@ -28,8 +28,8 @@ With this block the inverse kinematics of rotational-rotational mechanism given 
 
 <h4>Implementation</h4>
 <p>
-It inherits the real interfaces from the block for multiple inputs and multiple outputs 
-<a href=\"modelica://Modelica.Blocks.Interfaces.MIMO\">Modelica.Blocks.Interfaces.MIMO</a> 
+It inherits the real interfaces from the block for multiple inputs and multiple outputs
+<a href=\"modelica://Modelica.Blocks.Interfaces.MIMO\">Modelica.Blocks.Interfaces.MIMO</a>
 </p>
 <p>
 The joint variables are determine by:
@@ -49,6 +49,6 @@ The output is an array <b>y</b> where <b>y[1]</b> is the first joint coordinate 
 To connect the output y to other component the user must input the index of the array (1 or 2).
 </li>
 </ul>
-</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {-27.7385,20.1413}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-46.4664,9.54064},{47.1731,-4.59364}}),Rectangle(origin = {33.2509,22.8269}, rotation = -45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-46.4664,9.54064},{47.1731,-4.59364}}),Ellipse(origin = {-61.8375,-11.1307}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-15,15},{15,-15}}, endAngle = 360),Ellipse(origin = {3.74558,52.6855}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-15,15},{15,-15}}, endAngle = 360),Ellipse(origin = {-62.1201,-11.0601}, fillColor = {128,128,128}, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-7,7},{7,-7}}, endAngle = 360),Ellipse(origin = {3.4629,52.7562}, fillColor = {128,128,128}, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-7,7},{7,-7}}, endAngle = 360)}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {-27.7385,20.1413}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-46.4664,9.54064},{47.1731,-4.59364}}),Rectangle(origin = {33.2509,22.8269}, rotation = -45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-46.4664,9.54064},{47.1731,-4.59364}}),Ellipse(origin = {-61.8375,-11.1307}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-15,15},{15,-15}}, endAngle = 360),Ellipse(origin = {3.74558,52.6855}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-15,15},{15,-15}}, endAngle = 360),Ellipse(origin = {-62.1201,-11.0601}, fillColor = {128,128,128}, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-7,7},{7,-7}}, endAngle = 360),Ellipse(origin = {3.4629,52.7562}, fillColor = {128,128,128}, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-7,7},{7,-7}}, endAngle = 360)}));
 end RRInverseKinematics;
 

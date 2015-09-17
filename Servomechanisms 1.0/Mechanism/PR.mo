@@ -5,7 +5,7 @@ model PR "PR Mechanism"
   //Icon
   extends Servomechanisms.Utilities.IconNameB;
   //Inner declarations
-  inner Modelica.Mechanics.MultiBody.World world(enableAnimation = true, animateWorld = true, g = g) annotation(Placement(visible = true, transformation(origin = {-83.2282,-83.6844}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  inner Modelica.Mechanics.MultiBody.World world(enableAnimation = true, animateWorld = true, g = g) annotation(Placement(transformation(origin = {-83.2282,-83.6844}, extent = {{-10,-10},{10,10}})));
   //Parameters 1
   parameter String shape1 = "box" "shape of visualizer:\"shape\", \"box\", \"cylinder\" ";
   parameter Modelica.Mechanics.MultiBody.Types.Axis n1 = {1,0,0} "Axis of rotation resolved in frame_a (= same as in frame_b)" annotation(Evaluate = true);
@@ -63,12 +63,12 @@ model PR "PR Mechanism"
   //Other parameters
   parameter SI.Acceleration g = 9.81 "Constant gravity acceleration";
   //Components
-  Modelica.Mechanics.MultiBody.Parts.Fixed fixed1 annotation(Placement(visible = true, transformation(origin = {-84.0989,9.18728}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Mechanism.PLink plink1(shape = shape1, n = n1, r = r1, r_CM = r_CM1, m = m1, shapeLength = shapeLength1, shapeWidth = shapeWidth1, shapeHeight = shapeHeight1, shapeType = shapeType1, extra = extra1, I_11 = I_111, I_22 = I_221, I_33 = I_331, I_21 = I_211, I_31 = I_311, I_32 = I_321, boxLength = boxLength1, boxWidth = boxWidth1, boxHeight = boxHeight1, cylinderLength = cylinderLength1, cylinderDiameter = cylinderDiameter1, density = density1) annotation(Placement(visible = true, transformation(origin = {-28.3216,8.78092}, extent = {{-25.4947,-25.4947},{25.4947,25.4947}}, rotation = 0)));
-  Servomechanisms.Mechanism.RLink rlink1(shape = shape2, n = n2, r = r2, r_CM = r_CM2, m = m2, shapeLength = shapeLength2, shapeWidth = shapeWidth2, shapeHeight = shapeHeight2, shapeType = shapeType2, extra = extra2, I_11 = I_112, I_22 = I_222, I_33 = I_332, I_21 = I_212, I_31 = I_312, I_32 = I_322, boxLength = boxLength2, boxWidth = boxWidth2, boxHeight = boxHeight2, cylinderLength = cylinderLength2, cylinderDiameter = cylinderDiameter2, density = density2) annotation(Placement(visible = true, transformation(origin = {42.7032,9.48763}, extent = {{-23.3746,-23.3746},{23.3746,23.3746}}, rotation = 0)));
+  Modelica.Mechanics.MultiBody.Parts.Fixed fixed1 annotation(Placement(transformation(origin = {-84.0989,9.18728}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Mechanism.PLink plink1(shape = shape1, n = n1, r = r1, r_CM = r_CM1, m = m1, shapeLength = shapeLength1, shapeWidth = shapeWidth1, shapeHeight = shapeHeight1, shapeType = shapeType1, extra = extra1, I_11 = I_111, I_22 = I_221, I_33 = I_331, I_21 = I_211, I_31 = I_311, I_32 = I_321, boxLength = boxLength1, boxWidth = boxWidth1, boxHeight = boxHeight1, cylinderLength = cylinderLength1, cylinderDiameter = cylinderDiameter1, density = density1) annotation(Placement(transformation(origin = {-28.3216,8.78092}, extent = {{-25.4947,-25.4947},{25.4947,25.4947}})));
+  Servomechanisms.Mechanism.RLink rlink1(shape = shape2, n = n2, r = r2, r_CM = r_CM2, m = m2, shapeLength = shapeLength2, shapeWidth = shapeWidth2, shapeHeight = shapeHeight2, shapeType = shapeType2, extra = extra2, I_11 = I_112, I_22 = I_222, I_33 = I_332, I_21 = I_212, I_31 = I_312, I_32 = I_322, boxLength = boxLength2, boxWidth = boxWidth2, boxHeight = boxHeight2, cylinderLength = cylinderLength2, cylinderDiameter = cylinderDiameter2, density = density2) annotation(Placement(transformation(origin = {42.7032,9.48763}, extent = {{-23.3746,-23.3746},{23.3746,23.3746}})));
   //Interfaces
-  Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_r2 annotation(Placement(visible = true, transformation(origin = {28.9753,-42.7562}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {21.9082,-8.12722}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Translational.Interfaces.Flange_a flange_p1 annotation(Placement(visible = true, transformation(origin = {-35.3357,-35.3357}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-58.6573,-6.71379}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_r2 annotation(Placement(transformation(origin = {28.9753,-42.7562}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {21.9082,-8.12722}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Translational.Interfaces.Flange_a flange_p1 annotation(Placement(transformation(origin = {-35.3357,-35.3357}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-58.6573,-6.71379}, extent = {{-10,-10},{10,10}})));
 equation
   connect(plink1.flange_a,flange_p1) annotation(Line(points = {{-41.3589,9.90838},{-37.1025,9.90838},{-37.1025,-34.2756},{-37.1025,-34.2756}}));
   connect(rlink1.flange_a,flange_r2) annotation(Line(points = {{24.3986,9.66748},{27.2085,9.66748},{27.2085,-43.1095},{27.2085,-43.1095}}));
@@ -83,15 +83,15 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-This class models a PR mechanism. 
+This class models a PR mechanism.
 </p>
 
 <h4>Implementation</h4>
 <p>
-It uses  
-<a href=\"modelica://Servomechanisms.Mechanism.RLink\">RLink</a> 
+It uses
+<a href=\"modelica://Servomechanisms.Mechanism.RLink\">RLink</a>
 and
-<a href=\"modelica://Servomechanisms.Mechanism.PLink\">PLink</a> 
+<a href=\"modelica://Servomechanisms.Mechanism.PLink\">PLink</a>
 elements.
 </p>
 <img src=\"modelica://Servomechanisms/Resources/Images/Mechanism/pr.png\">
@@ -99,7 +99,7 @@ elements.
 <ul>
 <li>The first joint is fixed in the origin.</li>
 <li>
-By default the revolute joint axis is the z axis (rotation axis in direction 
+By default the revolute joint axis is the z axis (rotation axis in direction
 <pre>n=[0,0,1]</pre>
 ), the prismatic joint axis is the x axis
 <pre>n=[1,0,0]</pre>
@@ -110,7 +110,7 @@ By default the revolute joint axis is the z axis (rotation axis in direction
 The generalized coordinates theta and d are the angle in radians and distance in meters respectively.
 </li>
 <li>
-The interfaces are 
+The interfaces are
 <a href=\"modelica://Modelica.Mechanics.Rotational\">Modelica.Mechanics.Rotational</a>
 and
 <a href=\"modelica://Modelica.Mechanics.Translational\">Modelica.Mechanics.Translational</a>
@@ -121,6 +121,6 @@ The mechanical parameters of each link are editable (dimensions, mass, etc)
 </ul>
 
 <h4>Example</h4>
-</html>"), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {-37.9859,-9.18728}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-60,10},{60,-10}}),Rectangle(origin = {56.2191,22.4735}, rotation = 45, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-50,10},{50,-10}}),Ellipse(origin = {21.941,-8.13815}, lineColor = {170,0,0}, fillColor = {255,65,65}, fillPattern = FillPattern.VerticalCylinder, lineThickness = 1, extent = {{-20,20},{20,-20}}, endAngle = 360),Line(origin = {-85.159,-25.6184}, points = {{0,0},{60,0}}, thickness = 1),Line(origin = {-92.3675,-45.901}, rotation = 45, points = {{0,0},{30,0}}, thickness = 1),Line(origin = {-77.6678,-47.1025}, rotation = 45, points = {{0,0},{30,0}}, thickness = 1),Line(origin = {-60.1413,-47.2438}, rotation = 45, points = {{0,0},{30,0}}, thickness = 1),Rectangle(origin = {-56.6431,-11.2367}, lineColor = {170,0,0}, fillColor = {255,65,65}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {-15.6537,-8.76325}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-60,10},{-21.6254,-1.51943}})}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {-37.9859,-9.18728}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-60,10},{60,-10}}),Rectangle(origin = {56.2191,22.4735}, rotation = 45, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-50,10},{50,-10}}),Ellipse(origin = {21.941,-8.13815}, lineColor = {170,0,0}, fillColor = {255,65,65}, fillPattern = FillPattern.VerticalCylinder, lineThickness = 1, extent = {{-20,20},{20,-20}}, endAngle = 360),Line(origin = {-85.159,-25.6184}, points = {{0,0},{60,0}}, thickness = 1),Line(origin = {-92.3675,-45.901}, rotation = 45, points = {{0,0},{30,0}}, thickness = 1),Line(origin = {-77.6678,-47.1025}, rotation = 45, points = {{0,0},{30,0}}, thickness = 1),Line(origin = {-60.1413,-47.2438}, rotation = 45, points = {{0,0},{30,0}}, thickness = 1),Rectangle(origin = {-56.6431,-11.2367}, lineColor = {170,0,0}, fillColor = {255,65,65}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {-15.6537,-8.76325}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-60,10},{-21.6254,-1.51943}})}));
 end PR;
 

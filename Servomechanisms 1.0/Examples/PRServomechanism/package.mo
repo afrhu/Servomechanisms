@@ -10,7 +10,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-In this example a Prismatic-Rotational servomechanism is modeled and simulated with the 
+In this example a Prismatic-Rotational servomechanism is modeled and simulated with the
 components of the
 <a href=\"modelica://Servomechanisms\">Servomechanisms</a>
 package and the

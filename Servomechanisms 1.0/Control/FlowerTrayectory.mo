@@ -36,8 +36,8 @@ This blocks generates the x and y coordinates of a flower trayectory with the qu
 
 <h4>Implementation</h4>
 <p>
-It inherits the real interfaces from the block for multiple outputs 
-<a href=\"modelica://Modelica.Blocks.Interfaces.MO\">Modelica.Blocks.Interfaces.MO</a> 
+It inherits the real interfaces from the block for multiple outputs
+<a href=\"modelica://Modelica.Blocks.Interfaces.MO\">Modelica.Blocks.Interfaces.MO</a>
 .
 </p>
 <p>
@@ -69,6 +69,6 @@ With the default parameters the plot results will be:
 and with plot parametric:
 </p>
 <img src=\"modelica://Servomechanisms/Resources/Images/Control/flowerTrayectory02.png\">
-</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Line(points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = -90, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = 90, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = 180, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier)}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Line(points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = -90, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = 90, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier),Line(rotation = 180, points = {{0,0},{2.024,16.03},{7.782,30.31},{16.37,41.34},{26.42,48.06},{36.31,49.98},{44.37,47.25},{49.16,40.67},{49.62,31.49},{45.28,21.31},{36.31,11.8},{23.49,4.48},{8.125,0.5112},{0,0}}, color = {255,0,0}, thickness = 1, smooth = Smooth.Bezier)}));
 end FlowerTrayectory;
 

@@ -2,21 +2,21 @@ within Servomechanisms.Examples.RRServomechanism;
 model RRPositionControl2
   extends Modelica.Icons.Example;
   extends Servomechanisms.Examples.RRServomechanism.Data;
-  Servomechanisms.Control.RRInverseKinematics rrinversekinematics1(l1 = l1, l2 = l2) annotation(Placement(visible = true, transformation(origin = {-50.2487,-8.48059}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Control.CircleTrayectory circletrayectory1(r = r, xc = xc, yc = yc, period = period, startTime = 1) annotation(Placement(visible = true, transformation(origin = {-83.1533,-8.12721}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Mechanism.RR rr1(boxLength1 = l1, boxWidth1 = w1, boxHeight1 = h1, cylinderLength1 = l1, density1 = d1, boxLength2 = l2, boxWidth2 = w2, boxHeight2 = h2, density2 = d2, g = 9.81) annotation(Placement(visible = true, transformation(origin = {128.255,-14.6019}, extent = {{-27.2482,-27.2482},{27.2482,27.2482}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Components.IdealGear idealgear1(ratio = ratio1) annotation(Placement(visible = true, transformation(origin = {62.7781,-51.7283}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(visible = true, transformation(origin = {30.4813,-86.1453}, extent = {{10,-10},{-10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.IdealDCMotor idealdcmotor1(R = R, L = L, kt = k, J = J) annotation(Placement(visible = true, transformation(origin = {38.7033,-51.4406}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.IdealHBridge idealhbridge2 annotation(Placement(visible = true, transformation(origin = {13.0432,-51.7842}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.DCSource dcsource1(V = Voltage, R = 0) annotation(Placement(visible = true, transformation(origin = {12.9347,-28.3845}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Control.Controller controller1(controllerType = .Modelica.Blocks.Types.SimpleController.P, k = kp1, yMax = Voltage) annotation(Placement(visible = true, transformation(origin = {-10.5788,-51.9403}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor2 annotation(Placement(visible = true, transformation(origin = {30.324,-1.0998}, extent = {{10,-10},{-10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Components.IdealGear idealgear2(ratio = ratio2) annotation(Placement(visible = true, transformation(origin = {63.3275,30.137}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.IdealHBridge idealhbridge1 annotation(Placement(visible = true, transformation(origin = {14.3042,29.5958}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.DCSource dcsource2(V = Voltage, R = 0) annotation(Placement(visible = true, transformation(origin = {14.4127,53.2124}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Control.Controller controller2(controllerType = .Modelica.Blocks.Types.SimpleController.P, k = kp1, yMax = Voltage) annotation(Placement(visible = true, transformation(origin = {-10.3121,29.6423}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.IdealDCMotor idealdcmotor2(R = R, L = L, kt = k, J = J) annotation(Placement(visible = true, transformation(origin = {40.0301,29.7886}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Servomechanisms.Control.RRInverseKinematics rrinversekinematics1(l1 = l1, l2 = l2) annotation(Placement(transformation(origin = {-50.2487,-8.48059}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Control.CircleTrayectory circletrayectory1(r = r, xc = xc, yc = yc, period = period, startTime = 1) annotation(Placement(transformation(origin = {-83.1533,-8.12721}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Mechanism.RR rr1(boxLength1 = l1, boxWidth1 = w1, boxHeight1 = h1, cylinderLength1 = l1, density1 = d1, boxLength2 = l2, boxWidth2 = w2, boxHeight2 = h2, density2 = d2, g = 9.81) annotation(Placement(transformation(origin = {128.255,-14.6019}, extent = {{-27.2482,-27.2482},{27.2482,27.2482}})));
+  Modelica.Mechanics.Rotational.Components.IdealGear idealgear1(ratio = ratio1) annotation(Placement(transformation(origin = {62.7781,-51.7283}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(transformation(origin = {30.4813,-86.1453}, extent = {{10,-10},{-10,10}})));
+  Servomechanisms.Electrical.IdealDCMotor idealdcmotor1(R = R, L = L, kt = k, J = J) annotation(Placement(transformation(origin = {38.7033,-51.4406}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Electrical.IdealHBridge idealhbridge2 annotation(Placement(transformation(origin = {13.0432,-51.7842}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Electrical.DCSource dcsource1(V = Voltage, R = 0) annotation(Placement(transformation(origin = {12.9347,-28.3845}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Control.Controller controller1(controllerType = .Modelica.Blocks.Types.SimpleController.P, k = kp1, yMax = Voltage) annotation(Placement(transformation(origin = {-10.5788,-51.9403}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor2 annotation(Placement(transformation(origin = {30.324,-1.0998}, extent = {{10,-10},{-10,10}})));
+  Modelica.Mechanics.Rotational.Components.IdealGear idealgear2(ratio = ratio2) annotation(Placement(transformation(origin = {63.3275,30.137}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Electrical.IdealHBridge idealhbridge1 annotation(Placement(transformation(origin = {14.3042,29.5958}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Electrical.DCSource dcsource2(V = Voltage, R = 0) annotation(Placement(transformation(origin = {14.4127,53.2124}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Control.Controller controller2(controllerType = .Modelica.Blocks.Types.SimpleController.P, k = kp1, yMax = Voltage) annotation(Placement(transformation(origin = {-10.3121,29.6423}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Electrical.IdealDCMotor idealdcmotor2(R = R, L = L, kt = k, J = J) annotation(Placement(transformation(origin = {40.0301,29.7886}, extent = {{-10,-10},{10,10}})));
 equation
   connect(idealhbridge1.MotorA,idealdcmotor2.pin_p) annotation(Line(points = {{24.3042,34.5958},{29.7476,34.5958},{30.1119,34.7306},{30.1119,34.7306}}));
   connect(idealhbridge1.MotorB,idealdcmotor2.pin_n) annotation(Line(points = {{24.3042,24.5958},{30.1119,24.5958},{30.1119,25.19},{30.1119,25.19}}));
@@ -42,7 +42,7 @@ equation
   connect(idealgear1.flange_b,rr1.flange_rotational1) annotation(Line(points = {{72.7781,-51.7283},{101.171,-51.7283},{101.171,-18.7354},{101.171,-18.7354}}));
   connect(circletrayectory1.y[1],rrinversekinematics1.u[1]) annotation(Line(points = {{-72.1533,-8.12721},{-62.7635,-8.12721},{-62.7635,-7.96253},{-62.7635,-7.96253}}));
   connect(circletrayectory1.y[2],rrinversekinematics1.u[2]) annotation(Line(points = {{-72.1533,-8.12721},{-63.2319,-8.12721},{-63.2319,-8.43091},{-63.2319,-8.43091}}));
-  annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), experiment(StartTime = 0, StopTime = 9, Tolerance = 0.000001), Documentation(info = "<html>
+  annotation( experiment(StartTime = 0, StopTime = 9, Tolerance = 0.000001), Documentation(info = "<html>
 <head>
 <style type=\"text/css\">
 h4      { border-radius:8%;background-color: #D8D8D8 ;}
@@ -63,6 +63,6 @@ In this model the trayectory trackintg for RR servomechanisms is tested using Co
 
 <h4>See also</h4>
 
-</html>"), Diagram(coordinateSystem(extent = {{-100,-100},{150,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {30.0572,-71.1982}, lineColor = {85,85,127}, fillColor = {170,170,255}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-57.6081,57.6142},{55.1237,-24.9117}}),Rectangle(origin = {30.6773,14.6246}, lineColor = {85,85,127}, fillColor = {170,170,255}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-58.3367,53.6069},{55.1237,-24.9117}}),Rectangle(origin = {-40.9187,-29.0813}, lineColor = {255,170,0}, fillColor = {255,255,127}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-57.2438,39.3993},{6.71378,4.41696}})}));
+</html>"), Diagram(coordinateSystem(extent = {{-100,-100},{150,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {30.0572,-71.1982}, lineColor = {85,85,127}, fillColor = {170,170,255}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-57.6081,57.6142},{55.1237,-24.9117}}),Rectangle(origin = {30.6773,14.6246}, lineColor = {85,85,127}, fillColor = {170,170,255}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-58.3367,53.6069},{55.1237,-24.9117}}),Rectangle(origin = {-40.9187,-29.0813}, lineColor = {255,170,0}, fillColor = {255,255,127}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-57.2438,39.3993},{6.71378,4.41696}})}));
 end RRPositionControl2;
 

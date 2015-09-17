@@ -7,26 +7,26 @@ class IdealHBridge "Ideal H-Bridge"
   parameter SI.Resistance Ron(final min = 0) = 0 "Closed switch resistance";
   parameter SI.Conductance Goff(final min = 0) = 0 "Opened switch conductance";
   //Interfaces
-  Modelica.Electrical.Analog.Interfaces.PositivePin Vpos annotation(Placement(visible = true, transformation(origin = {37,90}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-50,100}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.NegativePin Vneg annotation(Placement(visible = true, transformation(origin = {37,-90}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {50,100}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.PositivePin MotorA annotation(Placement(visible = true, transformation(origin = {25,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.NegativePin MotorB annotation(Placement(visible = true, transformation(origin = {50,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.BooleanInput PWM annotation(Placement(visible = true, transformation(origin = {-100,50}, extent = {{-10.315,-10.315},{10.315,10.315}}, rotation = 0), iconTransformation(origin = {-100,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.BooleanInput ENABLE annotation(Placement(visible = true, transformation(origin = {-100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Electrical.Analog.Interfaces.PositivePin Vpos annotation(Placement(transformation(origin = {37,90}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-50,100}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Interfaces.NegativePin Vneg annotation(Placement(transformation(origin = {37,-90}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {50,100}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Interfaces.PositivePin MotorA annotation(Placement(transformation(origin = {25,0}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {100,50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Interfaces.NegativePin MotorB annotation(Placement(transformation(origin = {50,0}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {100,-50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.BooleanInput PWM annotation(Placement(transformation(origin = {-100,50}, extent = {{-10.315,-10.315},{10.315,10.315}}), iconTransformation(origin = {-100,50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.BooleanInput ENABLE annotation(Placement(transformation(origin = {-100,-50}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-100,-50}, extent = {{-10,-10},{10,10}})));
   //Components
-  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch Q2(Ron = Ron, Goff = Goff) annotation(Placement(visible = true, transformation(origin = {0,-50}, extent = {{10,-10},{-10,10}}, rotation = 90)));
-  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch Q1(Ron = Ron, Goff = Goff) annotation(Placement(visible = true, transformation(origin = {0,50}, extent = {{10,-10},{-10,10}}, rotation = 90)));
-  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch Q3(Ron = Ron, Goff = Goff) annotation(Placement(visible = true, transformation(origin = {75,50}, extent = {{10,10},{-10,-10}}, rotation = 90)));
-  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch Q4(Ron = Ron, Goff = Goff) annotation(Placement(visible = true, transformation(origin = {75,-50}, extent = {{10,10},{-10,-10}}, rotation = 90)));
-  //Modelica.Blocks.Logical.And and2 annotation(Placement(visible = true, transformation(origin = {-25,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  //Modelica.Blocks.Logical.And and1 annotation(Placement(visible = true, transformation(origin = {-25,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Sensors.VoltageSensor VAB annotation(Placement(visible = true, transformation(origin = {39.3443,22.9508}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Ideal.IdealDiode idealdiode2(Ron = Ron, Goff = Goff, Vknee = 0) annotation(Placement(visible = true, transformation(origin = {56.0656,50.445}, extent = {{-10,-10},{10,10}}, rotation = 90)));
-  Modelica.Electrical.Analog.Ideal.IdealDiode idealdiode3(Ron = Ron, Goff = Goff, Vknee = 0) annotation(Placement(visible = true, transformation(origin = {22.8103,-49.7892}, extent = {{-10,-10},{10,10}}, rotation = 90)));
-  Modelica.Electrical.Analog.Ideal.IdealDiode idealdiode4(Ron = Ron, Goff = Goff, Vknee = 0) annotation(Placement(visible = true, transformation(origin = {58.7354,-49.9297}, extent = {{-10,-10},{10,10}}, rotation = 90)));
-  Modelica.Electrical.Analog.Ideal.IdealDiode idealdiode1(Ron = Ron, Goff = Goff, Vknee = 0) annotation(Placement(visible = true, transformation(origin = {20.1405,50.5855}, extent = {{-10,-10},{10,10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch Q2(Ron = Ron, Goff = Goff) annotation(Placement(transformation(origin = {0,-50}, extent = {{10,-10},{-10,10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch Q1(Ron = Ron, Goff = Goff) annotation(Placement(transformation(origin = {0,50}, extent = {{10,-10},{-10,10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch Q3(Ron = Ron, Goff = Goff) annotation(Placement(transformation(origin = {75,50}, extent = {{10,10},{-10,-10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch Q4(Ron = Ron, Goff = Goff) annotation(Placement(transformation(origin = {75,-50}, extent = {{10,10},{-10,-10}}, rotation = 90)));
+  //Modelica.Blocks.Logical.And and2 annotation(Placement(transformation(origin = {-25,-50}, extent = {{-10,-10},{10,10}})));
+  //Modelica.Blocks.Logical.And and1 annotation(Placement(transformation(origin = {-25,50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Sensors.VoltageSensor VAB annotation(Placement(transformation(origin = {39.3443,22.9508}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Ideal.IdealDiode idealdiode2(Ron = Ron, Goff = Goff, Vknee = 0) annotation(Placement(transformation(origin = {56.0656,50.445}, extent = {{-10,-10},{10,10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Ideal.IdealDiode idealdiode3(Ron = Ron, Goff = Goff, Vknee = 0) annotation(Placement(transformation(origin = {22.8103,-49.7892}, extent = {{-10,-10},{10,10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Ideal.IdealDiode idealdiode4(Ron = Ron, Goff = Goff, Vknee = 0) annotation(Placement(transformation(origin = {58.7354,-49.9297}, extent = {{-10,-10},{10,10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Ideal.IdealDiode idealdiode1(Ron = Ron, Goff = Goff, Vknee = 0) annotation(Placement(transformation(origin = {20.1405,50.5855}, extent = {{-10,-10},{10,10}}, rotation = 90)));
   //extends Modelica.Electrical.Analog.Interfaces.OnePort;
-  Servomechanisms.Electrical.SignMagnitudDrive signmagnituddrive1 annotation(Placement(visible = true, transformation(origin = {-50,0}, extent = {{-20.9011,-20.9011},{20.9011,20.9011}}, rotation = 0)));
+  Servomechanisms.Electrical.SignMagnitudDrive signmagnituddrive1 annotation(Placement(transformation(origin = {-50,0}, extent = {{-20.9011,-20.9011},{20.9011,20.9011}})));
 equation
   connect(signmagnituddrive1.o2,Q2.control) annotation(Line(points = {{-29.0989,5.22528},{-7.06714,5.22528},{-7.06714,-50},{-7,-50}}, color = {0,0,127}, pattern = LinePattern.Dash));
   connect(signmagnituddrive1.o3,Q3.control) annotation(Line(points = {{-29.0989,-5.22528},{-14.1343,-5.22528},{-14.1343,-96.1131},{90.106,-96.1131},{90.106,49.1166},{82,49.1166},{82,50}}, color = {0,0,255}, pattern = LinePattern.Dash));
@@ -68,14 +68,14 @@ This component simulates the behaviour of an h-bridge using ideal switches.
 <p>
 This model has 4 ideal switches Q1, Q2, Q3 and Q4 wich their respective diode.
 Q1 and Q4 form half bridge and Q2 and Q3 the other half bridge.<br>
-The bridge is controlled using a <strong>Sign-Magnitude drive</strong> with 
+The bridge is controlled using a <strong>Sign-Magnitude drive</strong> with
 boolean inputs and outputs.
 </p>
 
 <h4>Notes</h4>
 <ul>
 <li>
-The voltage should be applied on the electrical interfaces 
+The voltage should be applied on the electrical interfaces
 (Vpos and Vneg) using an external dc source for example
 <a href=\"modelica://Servomechanisms.Electrical.DCSource\">DCSource</a>
 .
@@ -104,6 +104,6 @@ This model has a voltage sensor (real value) between MotorA and MotorB pins and
 <a href=\"modelica://Servomechanisms.Electrical.HBridge\">Servomechanisms.Electrical.HBridge</a>
 </dd>
 
-</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Ellipse(origin = {1.79696,-32.6562}, lineThickness = 1, extent = {{-10,10},{10,-10}}, endAngle = 360),Line(origin = {12.797,-32.6562}, points = {{0,0},{19,0}}, thickness = 1),Line(origin = {-28.203,-32.6562}, points = {{0,0},{19,0}}, thickness = 1),Text(origin = {2.50368,-32.3029}, extent = {{-10,10},{10,-10}}, textString = "M"),Line(origin = {1.79696,7.34378}, points = {{0,0},{30,0},{30,-20},{40,-30}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{30,-30},{30,-60},{40,-70}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{-30,-70},{-30,-80},{0,-80}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{0,0},{-30,0},{-30,-20},{-40,-30}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{-30,-30},{-30,-60},{-40,-70}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{30,-70},{30,-80},{0,-80}}, thickness = 1),Text(origin = {44.8809,17.0372}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "A", fontSize = 20),Text(origin = {43.9045,-81.1274}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "B", fontSize = 20),Text(origin = {-83.8308,62.5266}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "v+", fontSize = 20),Text(origin = {14.456,62.2393}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "v-", fontSize = 20),Text(origin = {-99.8447,19.2971}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "PWM", fontSize = 20),Text(origin = {-121.272,-81.3409}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "E", fontSize = 20)}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Ellipse(origin = {1.79696,-32.6562}, lineThickness = 1, extent = {{-10,10},{10,-10}}, endAngle = 360),Line(origin = {12.797,-32.6562}, points = {{0,0},{19,0}}, thickness = 1),Line(origin = {-28.203,-32.6562}, points = {{0,0},{19,0}}, thickness = 1),Text(origin = {2.50368,-32.3029}, extent = {{-10,10},{10,-10}}, textString = "M"),Line(origin = {1.79696,7.34378}, points = {{0,0},{30,0},{30,-20},{40,-30}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{30,-30},{30,-60},{40,-70}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{-30,-70},{-30,-80},{0,-80}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{0,0},{-30,0},{-30,-20},{-40,-30}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{-30,-30},{-30,-60},{-40,-70}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{30,-70},{30,-80},{0,-80}}, thickness = 1),Text(origin = {44.8809,17.0372}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "A", fontSize = 20),Text(origin = {43.9045,-81.1274}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "B", fontSize = 20),Text(origin = {-83.8308,62.5266}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "v+", fontSize = 20),Text(origin = {14.456,62.2393}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "v-", fontSize = 20),Text(origin = {-99.8447,19.2971}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "PWM", fontSize = 20),Text(origin = {-121.272,-81.3409}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "E", fontSize = 20)}));
 end IdealHBridge;
 

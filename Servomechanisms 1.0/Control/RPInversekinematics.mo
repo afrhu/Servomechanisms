@@ -13,7 +13,7 @@ equation
   //Rotational
   y[1] = atan2(u[2], u[1]);
   //acos(u[1] / (l1 + l2 + y[2]));
-  annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {-20.4946,-21.2014}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,-20},{80,20}}),Rectangle(origin = {31.3075,31.3075}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,-10},{80,10}}),Ellipse(origin = {-69.7526,-70.1059}, fillColor = {128,128,128}, fillPattern = FillPattern.Sphere, lineThickness = 1, extent = {{-24.3816,23.6749},{24.0282,-23.3215}}, endAngle = 360),Rectangle(origin = {6.18375,6.00707}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,15},{25,-15}}),Rectangle(origin = {-20.424,-22.5441}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{17.6957,-2.25431},{58.5119,10.4997}})}));
+  annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {-20.4946,-21.2014}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,-20},{80,20}}),Rectangle(origin = {31.3075,31.3075}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,-10},{80,10}}),Ellipse(origin = {-69.7526,-70.1059}, fillColor = {128,128,128}, fillPattern = FillPattern.Sphere, lineThickness = 1, extent = {{-24.3816,23.6749},{24.0282,-23.3215}}, endAngle = 360),Rectangle(origin = {6.18375,6.00707}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,15},{25,-15}}),Rectangle(origin = {-20.424,-22.5441}, rotation = 45, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{17.6957,-2.25431},{58.5119,10.4997}})}));
   annotation(Documentation(info = "<html>
 <head>
 <style type=\"text/css\">
@@ -29,8 +29,8 @@ With this block the inverse kinematics of rotational-prismatic mechanism given t
 
 <h4>Implementation</h4>
 <p>
-It inherits the real interfaces from the block for multiple inputs and multiple outputs 
-<a href=\"modelica://Modelica.Blocks.Interfaces.MIMO\">Modelica.Blocks.Interfaces.MIMO</a> 
+It inherits the real interfaces from the block for multiple inputs and multiple outputs
+<a href=\"modelica://Modelica.Blocks.Interfaces.MIMO\">Modelica.Blocks.Interfaces.MIMO</a>
 </p>
 <p>
 The joint variables are determine by (the zero of prismatic joint is located at the end of link 1):

@@ -1,7 +1,6 @@
 within Servomechanisms.Examples;
 package PPServomechanism
   extends Modelica.Icons.ExamplesPackage;
-  annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})));
   annotation(Documentation(info = "<html>
 <head>
 <style type=\"text/css\">
@@ -11,7 +10,7 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-In this example a Rotational-Rotational servomechanism is modeled and simulated with the 
+In this example a Rotational-Rotational servomechanism is modeled and simulated with the
 components of the
 <a href=\"modelica://Servomechanisms\">Servomechanisms</a>
 package and the

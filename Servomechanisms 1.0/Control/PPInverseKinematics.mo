@@ -10,7 +10,7 @@ block PPInverseKinematics
 equation
   y[1] = u[1] - l1;
   y[2] = u[2] - l2;
-  annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {-6.89046,-56.8905}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{80,-10}}),Rectangle(origin = {30.0707,-2.61484}, rotation = 90, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{80,-10}}),Rectangle(origin = {-47.6678,-56.3251}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {29.2226,-47.6325}, rotation = 90, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {13.1095,-56.6784}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{-42.6148,-2.22615}}),Rectangle(origin = {30.9894,11.7314}, rotation = 90, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{-42.6148,-2.22615}})}));
+  annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {-6.89046,-56.8905}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{80,-10}}),Rectangle(origin = {30.0707,-2.61484}, rotation = 90, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{80,-10}}),Rectangle(origin = {-47.6678,-56.3251}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {29.2226,-47.6325}, rotation = 90, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {13.1095,-56.6784}, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{-42.6148,-2.22615}}),Rectangle(origin = {30.9894,11.7314}, rotation = 90, fillColor = {128,128,128}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{-42.6148,-2.22615}})}));
   annotation(Documentation(info = "<html>
 <head>
 <style type=\"text/css\">
@@ -26,8 +26,8 @@ With this block the inverse kinematics of rotational-rotational mechanism given 
 
 <h4>Implementation</h4>
 <p>
-It inherits the real interfaces from the block for multiple inputs and multiple outputs 
-<a href=\"modelica://Modelica.Blocks.Interfaces.MIMO\">Modelica.Blocks.Interfaces.MIMO</a> 
+It inherits the real interfaces from the block for multiple inputs and multiple outputs
+<a href=\"modelica://Modelica.Blocks.Interfaces.MIMO\">Modelica.Blocks.Interfaces.MIMO</a>
 </p>
 <p>
 The joint variables are determine by:

@@ -8,13 +8,13 @@ block IdealPWM
   parameter SI.Time startTime = 0 "Time instant of first pulse";
   parameter Real k = 100 "Constant reference of 100%, ex: 12 for 12 V";
   //Components
-  Modelica.Blocks.Math.Abs abs annotation(Placement(visible = true, transformation(origin = {-50,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Blocks.Math.Abs abs annotation(Placement(transformation(origin = {-50,0}, extent = {{-10,-10},{10,10}})));
   //Interfaces
-  Modelica.Blocks.Interfaces.BooleanOutput y annotation(Placement(visible = true, transformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealInput u annotation(Placement(visible = true, transformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Math.Division division1 annotation(Placement(visible = true, transformation(origin = {-24.356,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Sources.Constant const(k = k / 100) annotation(Placement(visible = true, transformation(origin = {-52.459,-30.445}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.BooleanPulse booleanpulse(period = 1 / frequency, startTime = startTime) annotation(Placement(visible = true, transformation(origin = {33.7237,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.BooleanOutput y annotation(Placement(transformation(origin = {100,0}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.RealInput u annotation(Placement(transformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-100,0}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Math.Division division1 annotation(Placement(transformation(origin = {-24.356,0}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Sources.Constant const(k = k / 100) annotation(Placement(transformation(origin = {-52.459,-30.445}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Electrical.BooleanPulse booleanpulse(period = 1 / frequency, startTime = startTime) annotation(Placement(transformation(origin = {33.7237,0}, extent = {{-10,-10},{10,10}})));
 equation
   connect(division1.y,booleanpulse.u) annotation(Line(points = {{-13.356,0},{23.4192,0},{23.4192,0},{23.4192,0}}));
   connect(booleanpulse.y,y) annotation(Line(points = {{44.7237,0},{91.3349,0},{91.3349,-0.468384},{91.3349,-0.468384}}));
@@ -34,13 +34,13 @@ This block generates a boolean PWM output from a real input.
 </p>
 
 <h4>Implementation</h4>
-Using the 
-<a href=\"modelica://Modelica\">MSL</a> 
+Using the
+<a href=\"modelica://Modelica\">MSL</a>
 , the absolute value of the continous real input is calculated
 and then divided according to the 100 percentage reference value
 to obtain a number between 0 and 100.<br>
-The pulse is generated with the modified block  
-<a href=\"modelica://Servomechanisms.Electrical.BooleanPulse\">BooleanPulse</a> 
+The pulse is generated with the modified block
+<a href=\"modelica://Servomechanisms.Electrical.BooleanPulse\">BooleanPulse</a>
 .
 
 <h4>Notes</h4>
@@ -63,6 +63,6 @@ The block needs a reference value for 100  percent.
 <a href=\"modelica://Servomechanisms.Control.Controller\">Controller<a>
 
 
-</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Text(origin = {0,25}, extent = {{-70,50},{70,-12}}, textString = "PWM"),Line(origin = {0,-50}, points = {{-60,-25},{-60,25},{-50,25},{-50,-25},{-20,-25},{-20,25},{0,25},{0,-25},{20,-25},{20,25},{60,25},{60,-25}})}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Text(origin = {0,25}, extent = {{-70,50},{70,-12}}, textString = "PWM"),Line(origin = {0,-50}, points = {{-60,-25},{-60,25},{-50,25},{-50,-25},{-20,-25},{-20,25},{0,25},{0,-25},{20,-25},{20,25},{60,25},{60,-25}})}));
 end IdealPWM;
 

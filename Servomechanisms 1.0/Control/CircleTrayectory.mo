@@ -23,7 +23,7 @@ equation
   //kinematicPTP.q[1];
   //x coordinate
   //y coordinate
-  annotation(Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Documentation(info = "
+  annotation( Documentation(info = "
 <html>
 <head>
 <style type=\"text/css\">
@@ -38,8 +38,8 @@ This blocks generates the x and y coordinates of a circle trayectory with the ci
 
 <h4>Implementation</h4>
 <p>
-It inherits the real interfaces from the block for multiple outputs 
-<a href=\"modelica://Modelica.Blocks.Interfaces.MO\">Modelica.Blocks.Interfaces.MO</a> 
+It inherits the real interfaces from the block for multiple outputs
+<a href=\"modelica://Modelica.Blocks.Interfaces.MO\">Modelica.Blocks.Interfaces.MO</a>
 </p>
 <p>
 The parametric equations implemented are:
@@ -70,6 +70,6 @@ With the default parameters the plot results will be:
 and with plot parametric:
 </p>
 <img src=\"modelica://Servomechanisms/Resources/Images/Control/circletrayectory02.png\">
-</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Ellipse(origin = {4.21546,3.74707}, lineColor = {255,0,0}, lineThickness = 1, extent = {{-60,60},{60,-60}}, endAngle = 360)}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Ellipse(origin = {4.21546,3.74707}, lineColor = {255,0,0}, lineThickness = 1, extent = {{-60,60},{60,-60}}, endAngle = 360)}));
 end CircleTrayectory;
 

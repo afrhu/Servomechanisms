@@ -47,7 +47,7 @@ class Link "Link"
   //replaceable class shape = Modelica.Mechanics.MultiBody.Parts.BodyShape;
   //replaceable class Shape = Modelica.Mechanics.MultiBody.Parts.BodyShape annotation(choices(choice(redeclare class shape = Shape.BodyBox), choice(redeclare class shape = Shape.BodyCylinder)));
    replaceable class Shape = Modelica.Mechanics.MultiBody.Parts.BodyShape;
-   Shape bodyshape(r = {1,0,0}) annotation(Placement(visible = true, transformation(origin = {0,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+   Shape bodyshape(r = {1,0,0}) annotation(Placement(transformation(extent = {{-10,-10},{10,10}})));
   end LinkShapetest;
   LinkShapetest linkshape1(redeclare class Shape = ShapePath.BodyShape, bodyshape.animateSphere = false, bodyshape.r = r, bodyshape.r_CM = r_CM, bodyshape.m = m, bodyshape.length = shapeLength, bodyshape.width = shapeWidth, bodyshape.height = shapeHeight, bodyshape.shapeType = shapeType, bodyshape.extra = extra, bodyshape.I_11 = I_11, bodyshape.I_22 = I_22, bodyshape.I_33 = I_33, bodyshape.I_21 = I_21, bodyshape.I_31 = I_31, bodyshape.I_32 = I_32) if shape == "shape";
   LinkShapetest linkshape2(redeclare class Shape = ShapePath.BodyBox, each bodyshape.r = {boxLength,0,0}, bodyshape.length = boxLength, bodyshape.width = boxWidth, bodyshape.height = boxHeight, bodyshape.density = density) if shape == "box";
@@ -65,7 +65,7 @@ equation
     connect(frame_b,cylinder1.frame_b);
   else
   end if;
-  annotation(Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Documentation(info = "
+  annotation( Documentation(info = "
 <html>
 <head>
 <style type=\"text/css\">
@@ -76,18 +76,18 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 <h4>General</h4>
 <p>
 This class enables the creation of a <strong>link</strong> element by selecting one of the predefine components from Multibody library:
-<a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.BodyBox\">BodyBox</a> 
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.BodyBox\">BodyBox</a>
 ,
-<a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.BodyCylinder\">BodyCylinder</a> 
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.BodyCylinder\">BodyCylinder</a>
 or
-<a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.BodyShape\">BodyShape</a> 
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.BodyShape\">BodyShape</a>
 .
 </p>
 
 <h4>Implementation</h4>
-<em>IF statements</em> allow the selection of one 
-kind of link from the 
-<a href=\"modelica://Modelica.Multibody\">Multibody</a> 
+<em>IF statements</em> allow the selection of one
+kind of link from the
+<a href=\"modelica://Modelica.Multibody\">Multibody</a>
 library.<br>
 <em>Replaceable</em> statement was intended at the beginning but
 it did not work well.<br>
@@ -113,6 +113,6 @@ the user.
 </li></ul>
 
 </html>
-"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {18.6667,0.8}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.VerticalCylinder, lineThickness = 1, extent = {{-87.4667,49.3333},{49.0667,-48.2667}}),Text(origin = {-20.5795,-66.2898}, lineColor = {128,128,128}, extent = {{-47.0954,8.90459},{91.0247,-26.318}}, textString = "shape = %shape")}));
+"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {18.6667,0.8}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.VerticalCylinder, lineThickness = 1, extent = {{-87.4667,49.3333},{49.0667,-48.2667}}),Text(origin = {-20.5795,-66.2898}, lineColor = {128,128,128}, extent = {{-47.0954,8.90459},{91.0247,-26.318}}, textString = "shape = %shape")}));
 end Link;
 

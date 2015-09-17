@@ -11,22 +11,22 @@ class DCMotor "DC Motor"
   parameter SI.RotationalDampingConstant b = 0 "Damping Factor";
   parameter SI.Torque t_m = 0.001 "Max. Friction torque";
   //Components
-  Modelica.Electrical.Analog.Basic.Resistor resistor(R = R) annotation(Placement(visible = true, transformation(origin = {-75,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Basic.Inductor inductor(L = L) annotation(Placement(visible = true, transformation(origin = {-25,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Basic.EMF emf(k = kt) annotation(Placement(visible = true, transformation(origin = {0,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Components.Inertia inertia(J = J) annotation(Placement(visible = true, transformation(origin = {75,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Components.Damper damper(d = b) annotation(Placement(visible = true, transformation(origin = {60,-25}, extent = {{-10,-10},{10,10}}, rotation = 90)));
-  Modelica.Mechanics.Rotational.Components.Fixed fixed annotation(Placement(visible = true, transformation(origin = {60,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Components.BearingFriction bearingfriction(peak = 1, tau_pos = [0,t_m]) annotation(Placement(visible = true, transformation(origin = {40,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Electrical.Analog.Basic.Resistor resistor(R = R) annotation(Placement(transformation(origin = {-75,50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Basic.Inductor inductor(L = L) annotation(Placement(transformation(origin = {-25,50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Basic.EMF emf(k = kt) annotation(Placement(transformation(extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Rotational.Components.Inertia inertia(J = J) annotation(Placement(transformation(origin = {75,0}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Rotational.Components.Damper damper(d = b) annotation(Placement(transformation(origin = {60,-25}, extent = {{-10,-10},{10,10}}, rotation = 90)));
+  Modelica.Mechanics.Rotational.Components.Fixed fixed annotation(Placement(transformation(origin = {60,-50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Rotational.Components.BearingFriction bearingfriction(peak = 1, tau_pos = [0,t_m]) annotation(Placement(transformation(origin = {40,0}, extent = {{-10,-10},{10,10}})));
   //Sensors
-  Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor annotation(Placement(visible = true, transformation(origin = {75,50}, extent = {{10,-10},{-10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedsensor annotation(Placement(visible = true, transformation(origin = {75,25}, extent = {{10,-10},{-10,10}}, rotation = 0)));
+  Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor annotation(Placement(transformation(origin = {75,50}, extent = {{10,-10},{-10,10}})));
+  Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedsensor annotation(Placement(transformation(origin = {75,25}, extent = {{10,-10},{-10,10}})));
   //Interfaces
-  Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(Placement(visible = true, transformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-100.902,49.0984}, extent = {{-9.09836,-9.09836},{9.09836,9.09836}}, rotation = 0), iconTransformation(origin = {-100,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealOutput angle annotation(Placement(visible = true, transformation(origin = {50,50}, extent = {{10,-10},{-10,10}}, rotation = 0), iconTransformation(origin = {-50,-100}, extent = {{-10,-10},{10,10}}, rotation = -90)));
-  Modelica.Blocks.Interfaces.RealOutput speed annotation(Placement(visible = true, transformation(origin = {50,25}, extent = {{10,-10},{-10,10}}, rotation = 0), iconTransformation(origin = {50,-100}, extent = {{-10,-10},{10,10}}, rotation = -90)));
+  Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(Placement(transformation(origin = {100,0}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(transformation(origin = {-100,-50}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-100,-50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(transformation(origin = {-100.902,49.0984}, extent = {{-9.09836,-9.09836},{9.09836,9.09836}}), iconTransformation(origin = {-100,50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.RealOutput angle annotation(Placement(transformation(origin = {50,50}, extent = {{10,-10},{-10,10}}), iconTransformation(origin = {-50,-100}, extent = {{-10,-10},{10,10}}, rotation = -90)));
+  Modelica.Blocks.Interfaces.RealOutput speed annotation(Placement(transformation(origin = {50,25}, extent = {{10,-10},{-10,10}}), iconTransformation(origin = {50,-100}, extent = {{-10,-10},{10,10}}, rotation = -90)));
 equation
   connect(speedsensor.w,speed) annotation(Line(points = {{64,25},{56.2061,25},{56.2061,24.356},{56.2061,24.356}}));
   connect(anglesensor.phi,angle) annotation(Line(points = {{64,50},{57.1429,50},{57.1429,48.7119},{57.1429,48.7119}}));
@@ -50,34 +50,34 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-This is the model of a permanent magnet DC motor, one of the most common electromechanical actuator 
+This is the model of a permanent magnet DC motor, one of the most common electromechanical actuator
 with caractheristics as low inductance and low friction.
 It includes dead zone.
 </p>
 
 <h4>Implementation</h4>
-<strong>DCMotor</strong> is based upon the mathematical model of a 
+<strong>DCMotor</strong> is based upon the mathematical model of a
 permanent magnet dc motor.
 It is similar to the
 <a href=\"modelica://Servomechanisms.Electrical.IdealDCMotor\">
 IdealDCMotor
-</a> 
-class but this model is nonlinear. A dead zone is added by 
-using the static friction of 
+</a>
+class but this model is nonlinear. A dead zone is added by
+using the static friction of
 <a href=\"modelica://Modelica.Mechanics.Rotational.Components.BearingFriction\">
 BearingFriction
 </a>
 component.<br>
-Using elements from 
-<a href=\"modelica://Modelica\">MSL</a>  
+Using elements from
+<a href=\"modelica://Modelica\">MSL</a>
 the model was developed to represent the mathematical equations:<br>
 <img src=\"modelica://Servomechanisms/Resources/Images/Electrical/dcmotorequation.png\" alt=\"dcmotorequation.png\" >
 
 <h4>Notes</h4>
 <ul>
 <li>
-The behavior of the voltage source is given by a <strong>real input</strong> (for example a real source block could be connected as an input, see 
-<a href=\"modelica://Modelica.Blocks.Sources\">Modelica.Blocks.Sources</a>  
+The behavior of the voltage source is given by a <strong>real input</strong> (for example a real source block could be connected as an input, see
+<a href=\"modelica://Modelica.Blocks.Sources\">Modelica.Blocks.Sources</a>
 ).
 </li>
 <li>This model is linear</li>
@@ -86,6 +86,6 @@ The behavior of the voltage source is given by a <strong>real input</strong> (fo
 </ul>
 
 
-</html>"), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Text(origin = {-38.7173,-67.4584}, lineColor = {255,255,255}, extent = {{-14.4893,12.3515},{14.4893,-12.3515}}, textString = "Phi", fontSize = 30),Text(origin = {50.6413,-66.9359}, extent = {{-14.4893,12.3515},{14.4893,-12.3515}}, textString = "w", fontSize = 30)}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Text(origin = {-38.7173,-67.4584}, lineColor = {255,255,255}, extent = {{-14.4893,12.3515},{14.4893,-12.3515}}, textString = "Phi", fontSize = 30),Text(origin = {50.6413,-66.9359}, extent = {{-14.4893,12.3515},{14.4893,-12.3515}}, textString = "w", fontSize = 30)}));
 end DCMotor;
 

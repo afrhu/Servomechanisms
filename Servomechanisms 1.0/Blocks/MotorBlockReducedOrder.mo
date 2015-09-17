@@ -7,12 +7,12 @@ block MotorBlockReducedOrder
   parameter Real J = 0.0000000153 "Rotor Inertia";
   parameter Real B = 0 "Damping constant";
   parameter Real kb = 7.83 "Back emf constant";
-  Modelica.Blocks.Continuous.TransferFunction transferfunction2(a = {J,B}) annotation(Placement(visible = true, transformation(origin = {54.6604,0.327869}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Math.Add add1(k1 = -1) annotation(Placement(visible = true, transformation(origin = {22.0141,1.40515}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealInput realinput1 annotation(Placement(visible = true, transformation(origin = {1.87354,98.3607}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-0.936768,93.6768}, extent = {{-10,-10},{10,10}}, rotation = -90)));
-  Modelica.Blocks.Math.Feedback feedback1 annotation(Placement(visible = true, transformation(origin = {-80.562,0.468379}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Math.Gain gain2(k = kb) annotation(Placement(visible = true, transformation(origin = {-7.16627,-48.3841}, extent = {{10,-10},{-10,10}}, rotation = 0)));
-  Modelica.Blocks.Math.Gain gain1(k = km / R) annotation(Placement(visible = true, transformation(origin = {-33.2553,0.936764}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Blocks.Continuous.TransferFunction transferfunction2(a = {J,B}) annotation(Placement(transformation(origin = {54.6604,0.327869}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Math.Add add1(k1 = -1) annotation(Placement(transformation(origin = {22.0141,1.40515}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.RealInput realinput1 annotation(Placement(transformation(origin = {1.87354,98.3607}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-0.936768,93.6768}, extent = {{-10,-10},{10,10}}, rotation = -90)));
+  Modelica.Blocks.Math.Feedback feedback1 annotation(Placement(transformation(origin = {-80.562,0.468379}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Math.Gain gain2(k = kb) annotation(Placement(transformation(origin = {-7.16627,-48.3841}, extent = {{10,-10},{-10,10}})));
+  Modelica.Blocks.Math.Gain gain1(k = km / R) annotation(Placement(transformation(origin = {-33.2553,0.936764}, extent = {{-10,-10},{10,10}})));
 equation
   connect(gain1.u,feedback1.y) annotation(Line(points = {{-45.2553,0.936764},{-71.6628,0.936764},{-71.6628,0},{-71.6628,0}}));
   connect(gain1.y,add1.u2) annotation(Line(points = {{-22.2553,0.936764},{-1.40515,0.936764},{-1.40515,-4.21546},{8.8993,-4.21546},{8.8993,-4.21546}}));
@@ -22,7 +22,6 @@ equation
   connect(add1.y,transferfunction2.u) annotation(Line(points = {{33.0141,1.40515},{42.623,1.40515},{42.623,-1.40515},{42.623,-1.40515}}));
   connect(realinput1,add1.u1) annotation(Line(points = {{1.87354,98.3607},{4.68384,98.3607},{4.68384,7.02576},{9.36768,7.02576},{9.36768,7.02576}}));
   connect(u,feedback1.u1) annotation(Line(points = {{-120,0},{-88.5246,0},{-88.5246,-0.468384},{-88.5246,-0.468384}}));
-  annotation(Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})));
   annotation(Documentation(info = "<html>
 <head>
 <style type=\"text/css\">
