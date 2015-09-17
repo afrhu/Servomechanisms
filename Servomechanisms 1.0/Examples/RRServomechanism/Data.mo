@@ -8,7 +8,7 @@ record Data "RR Servomechanism Data"
   parameter Real l1 = 0.2,w1 = 0.02,h1 = 0.005,d1 = 400,min1 = 0,max1 = pi / 2;
   //Parameters of link 2
   parameter Real l2 = 0.1,w2 = 0.02,h2 = 0.005,d2 = 400,min2 = -pi / 2,max2 = pi / 2;
-  //Parameters of circle trayectory
+  //Parameters of circle trajectory
   parameter Real r = 0.03,xc = 0.25,yc = 0.075;
   //Reduction parameters
   parameter Real ratio1 = 10,ratio2 = 5;
@@ -43,7 +43,7 @@ Parameters of link 1
 Parameters of link 2
 </li>
 <li>
-Parameters of cirle trayectory
+Parameters of cirle trajectory
 </li>
 <li>
 Motor parameters
@@ -57,6 +57,6 @@ Control parameters
 All this parameters can be change in the <strong>Text View</strong>.
 </p>
 
-</html>"), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {-39.6389,81.7873}, lineColor = {0,85,255}, fillColor = {170,255,255}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-55.0106,10.4876},{128.963,-10.8519}}),Text(origin = {-36.4126,68.9466}, extent = {{-54.3326,21.7799},{-30.8798,12.9988}}, textString = "l1 = 0.2 [m]", fontSize = 4, fontName = "Arial", horizontalAlignment = TextAlignment.Left),Text(origin = {-36.5963,59.3905}, extent = {{-54.3326,21.7799},{-26.6175,15.1217}}, textString = "l2 =0.1 [m]", fontSize = 4, horizontalAlignment = TextAlignment.Left),Text(origin = {0.53695,69.2675}, extent = {{-54.3326,21.7799},{-9.02189,11.9059}}, textString = "min1 = 0, max1 = pi", fontSize = 4, fontName = "Arial", horizontalAlignment = TextAlignment.Left),Text(origin = {0.500448,61.2165}, extent = {{-54.3326,21.7799},{-9.02189,11.9059}}, textString = "min2 = -pi/2, max2 = pi/2", fontSize = 4, fontName = "Arial", horizontalAlignment = TextAlignment.Left),Text(origin = {67.8593,69.1946}, extent = {{-54.3326,21.7799},{-9.02189,11.9059}}, textString = "r = 0.03 [m],center (0.25,0.075)", fontSize = 4, fontName = "Arial", horizontalAlignment = TextAlignment.Left)}));
+</html>"), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {-39.6389,81.7873}, lineColor = {0,85,255}, fillColor = {170,255,255}, pattern = LinePattern.Dash, fillPattern = FillPattern.Solid, lineThickness = 1, extent = {{-55.0106,10.4876},{128.963,-10.8519}}),Text(origin = {-36.4126,68.9466}, extent = {{-54.3326,21.7799},{-30.8798,12.9988}}, textString = "l1 = 0.2 [m]", fontSize = 4, fontName = "Arial", horizontalAlignment = TextAlignment.Left),Text(origin = {-36.5963,59.3905}, extent = {{-54.3326,21.7799},{-26.6175,15.1217}}, textString = "l2 =0.1 [m]", fontSize = 4, horizontalAlignment = TextAlignment.Left),Text(origin = {0.53695,69.2675}, extent = {{-54.3326,21.7799},{-9.02189,11.9059}}, textString = "min1 = 0, max1 = pi", fontSize = 4, fontName = "Arial", horizontalAlignment = TextAlignment.Left),Text(origin = {0.500448,61.2165}, extent = {{-54.3326,21.7799},{-9.02189,11.9059}}, textString = "min2 = -pi/2, max2 = pi/2", fontSize = 4, fontName = "Arial", horizontalAlignment = TextAlignment.Left),Text(origin = {67.8593,69.1946}, extent = {{-54.3326,21.7799},{-9.02189,11.9059}}, textString = "r = 0.03 [m],center (0.25,0.075)", fontSize = 4, fontName = "Arial", horizontalAlignment = TextAlignment.Left)}));
 end Data;
 

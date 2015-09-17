@@ -22,13 +22,13 @@ block Controller "Controller"
   parameter Real y_start = 0 "Initial value of output" annotation(Dialog(enable = initType == .Modelica.Blocks.Types.InitPID.InitialOutput, group = "Initialization"));
   parameter Boolean strict = false "= true, if strict limits with noEvent(..)" annotation(Evaluate = true, choices(checkBox = true), Dialog(tab = "Advanced"));
   //Interfaces
-  Modelica.Blocks.Interfaces.RealInput reference annotation(Placement(visible = true, transformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealInput feedback annotation(Placement(visible = true, transformation(origin = {0,-100}, extent = {{-10,-10},{10,10}}, rotation = 90), iconTransformation(origin = {0,-100}, extent = {{-10,10},{10,-10}}, rotation = 90)));
-  Modelica.Blocks.Interfaces.BooleanOutput pwm annotation(Placement(visible = true, transformation(origin = {100,50}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.BooleanOutput direction annotation(Placement(visible = true, transformation(origin = {100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealInput reference annotation(Placement(transformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-100,0}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.RealInput feedback annotation(Placement(transformation(origin = {0,-100}, extent = {{-10,-10},{10,10}}, rotation = 90), iconTransformation(origin = {0,-100}, extent = {{-10,10},{10,-10}}, rotation = 90)));
+  Modelica.Blocks.Interfaces.BooleanOutput pwm annotation(Placement(transformation(origin = {100,50}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {100,50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.BooleanOutput direction annotation(Placement(transformation(origin = {100,-50}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {100,-50}, extent = {{-10,-10},{10,10}})));
   //Components
-  Servomechanisms.Electrical.IdealPWM idealpwm1(k = yMax, frequency = frequency) annotation(Placement(visible = true, transformation(origin = {50,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Control.PIDControllerDirection pidcontrollerdirection1(controllerType = controllerType, k = k, Ti = Ti, Td = Td, yMax = yMax, wp = wp, wd = wd, Ni = Ni, Nd = Nd, initType = initType, limitsAtInit = limitsAtInit, xi_start = xi_start, xd_start = xd_start, y_start = y_start, strict = strict) annotation(Placement(visible = true, transformation(origin = {0,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Servomechanisms.Electrical.IdealPWM idealpwm1(k = yMax, frequency = frequency) annotation(Placement(transformation(origin = {50,0}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Control.PIDControllerDirection pidcontrollerdirection1(controllerType = controllerType, k = k, Ti = Ti, Td = Td, yMax = yMax, wp = wp, wd = wd, Ni = Ni, Nd = Nd, initType = initType, limitsAtInit = limitsAtInit, xi_start = xi_start, xd_start = xd_start, y_start = y_start, strict = strict) annotation(Placement(transformation(extent = {{-10,-10},{10,10}})));
 equation
   connect(feedback,pidcontrollerdirection1.feedback) annotation(Line(points = {{0,-100},{0,-9.36768},{0,-9.36768},{0,-9.36768}}));
   connect(reference,pidcontrollerdirection1.reference) annotation(Line(points = {{-100,0},{-11.2412,0},{-11.2412,0.468384},{-11.2412,0.468384}}));
@@ -49,8 +49,8 @@ This block describes the controller of a feedback (selectable PID) system for ve
 </p>
 
 <h4>Implementation</h4>
-With the error signal the direction is established and the control signal with the 
-<a href=\"modelica://Servomechanisms.Control.PIDControllerDirection\">Servomechanisms.Control.PIDControllerDirection</a> 
+With the error signal the direction is established and the control signal with the
+<a href=\"modelica://Servomechanisms.Control.PIDControllerDirection\">Servomechanisms.Control.PIDControllerDirection</a>
 block, this are boolean PWM and direction outputs.
 
 <h4>Notes</h4>
@@ -60,6 +60,6 @@ The user must use a reference signal value and a feedback signal (real values).
 </li>
 </ul>
 
-</html>"), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2,2}), graphics = {Text(extent = {{-80,50},{80,-50}}, textString = "Controller")}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = false, grid = {2,2}), graphics = {Text(extent = {{-80,50},{80,-50}}, textString = "Controller")}));
 end Controller;
 

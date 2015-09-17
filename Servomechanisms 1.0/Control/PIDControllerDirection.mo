@@ -21,14 +21,14 @@ model PIDControllerDirection
   parameter Boolean strict = false "= true, if strict limits with noEvent(..)" annotation(Evaluate = true, choices(checkBox = true), Dialog(tab = "Advanced"));
   //parameter SI.Time T(start = 1, min = Modelica.Constants.small) "Time Constant (T>0 required)";
   //Components
-  Modelica.Blocks.Logical.GreaterEqualThreshold greaterequalthreshold1 annotation(Placement(visible = true, transformation(origin = {50,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Math.Feedback feedback1 annotation(Placement(visible = true, transformation(origin = {-50,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Continuous.LimPID limpid(k = k, Ti = Ti, Td = Td, yMax = yMax, wp = wp, wd = wd, Ni = Ni, Nd = Nd, limitsAtInit = limitsAtInit, xi_start = xi_start, xd_start = xd_start, y_start = y_start, strict = strict, controllerType = controllerType, initType = initType) annotation(Placement(visible = true, transformation(origin = {0,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Blocks.Logical.GreaterEqualThreshold greaterequalthreshold1 annotation(Placement(transformation(origin = {50,-50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Math.Feedback feedback1 annotation(Placement(transformation(origin = {-50,-50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Continuous.LimPID limpid(k = k, Ti = Ti, Td = Td, yMax = yMax, wp = wp, wd = wd, Ni = Ni, Nd = Nd, limitsAtInit = limitsAtInit, xi_start = xi_start, xd_start = xd_start, y_start = y_start, strict = strict, controllerType = controllerType, initType = initType) annotation(Placement(transformation(extent = {{-10,-10},{10,10}})));
   //Interfaces
-  Modelica.Blocks.Interfaces.RealInput reference annotation(Placement(visible = true, transformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealOutput controlsignal annotation(Placement(visible = true, transformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealInput feedback annotation(Placement(visible = true, transformation(origin = {0,-100}, extent = {{-10,-10},{10,10}}, rotation = 90), iconTransformation(origin = {0,-100}, extent = {{-10,-10},{10,10}}, rotation = 90)));
-  Modelica.Blocks.Interfaces.BooleanOutput direction annotation(Placement(visible = true, transformation(origin = {100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {100,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealInput reference annotation(Placement(transformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-100,0}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.RealOutput controlsignal annotation(Placement(transformation(origin = {100,0}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {100,0}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.RealInput feedback annotation(Placement(transformation(origin = {0,-100}, extent = {{-10,-10},{10,10}}, rotation = 90), iconTransformation(origin = {0,-100}, extent = {{-10,-10},{10,10}}, rotation = 90)));
+  Modelica.Blocks.Interfaces.BooleanOutput direction annotation(Placement(transformation(origin = {100,-50}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {100,-50}, extent = {{-10,-10},{10,10}})));
 equation
   connect(greaterequalthreshold1.y,direction) annotation(Line(points = {{61,-50},{94.6136,-50},{94.6136,-50},{100,-50}}, pattern = LinePattern.Dash));
   connect(feedback1.u2,feedback) annotation(Line(points = {{-50,-58},{-49.8221,-58},{-49.8221,-97.5089},{0,-97.5089},{0,-100}}, pattern = LinePattern.Dash));
@@ -51,8 +51,8 @@ This block describes the controller of a feedback system with a direction output
 </p>
 
 <h4>Implementation</h4>
-The control signal is obtain with 
-<a href=\"modelica://Modelica.Blocks.Continuous.LimPID\">Modelica.Blocks.Continuous.LimPID</a> 
+The control signal is obtain with
+<a href=\"modelica://Modelica.Blocks.Continuous.LimPID\">Modelica.Blocks.Continuous.LimPID</a>
 block, the direction boolean is obtain comparing the signal of the error signal.
 
 <h4>Notes</h4>
@@ -62,6 +62,6 @@ The user must use a reference signal value and a feedback signal (real values).
 </li>
 </ul>
 
-</html>"), Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Text(origin = {-6.89046,5.65371}, extent = {{-56.3604,56.1837},{56.3604,-56.1837}}, textString = "PID+DIR")}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Text(origin = {-6.89046,5.65371}, extent = {{-56.3604,56.1837},{56.3604,-56.1837}}, textString = "PID+DIR")}));
 end PIDControllerDirection;
 

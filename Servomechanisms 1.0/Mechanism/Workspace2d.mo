@@ -23,26 +23,25 @@ equation
   //x = 0;
 algorithm
   when sample(tiempo, tiempo) then
-      if y[2] >= max2 then 
+      if y[2] >= max2 then
       down:=true;
       y[1]:=pre(y[1]);
     else
 
     end if;
-    if down then 
+    if down then
       y[2]:=pre(y[2]) - paso2;
     else
       y[2]:=pre(y[2]) + paso2;
     end if;
-    if y[2] <= min2 - paso2 then 
+    if y[2] <= min2 - paso2 then
       down:=false;
       y[1]:=pre(y[1]) + paso1;
       y[2]:=pre(y[2]);
     else
 
-    end if;  
+    end if;
   end when;
-  annotation(Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})));
   annotation(Documentation(info = "
 <html>
 <head>

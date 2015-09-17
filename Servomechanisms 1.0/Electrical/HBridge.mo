@@ -7,35 +7,35 @@ model HBridge
   parameter SI.Resistance Res = 10000000.0;
   parameter SI.Resistance Res1 = 1000;
   parameter SI.Transconductance Beta = 10 "Transconductance parameter";
-  Modelica.Electrical.Analog.Semiconductors.NMOS Q4(RDS = Res, Beta = Beta) annotation(Placement(visible = true, transformation(origin = {49.0459,-26.2191}, extent = {{10,-10},{-10,10}}, rotation = 0)));
+  Modelica.Electrical.Analog.Semiconductors.NMOS Q4(RDS = Res, Beta = Beta) annotation(Placement(transformation(origin = {49.0459,-26.2191}, extent = {{10,-10},{-10,10}})));
   //Interfaces
   //Components
-  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch S1(Ron = 0) annotation(Placement(visible = true, transformation(origin = {-48.0565,42.4028}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch S4(Ron = 0) annotation(Placement(visible = true, transformation(origin = {82.2615,-31.1661}, extent = {{10,-10},{-10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Semiconductors.Diode diode1 annotation(Placement(visible = true, transformation(origin = {6.67484,49.5762}, extent = {{3.02978,-3.02978},{-3.02978,3.02978}}, rotation = -90)));
-  Modelica.Electrical.Analog.Semiconductors.Diode diode4 annotation(Placement(visible = true, transformation(origin = {32.8514,-25.8603}, extent = {{3.02978,-3.02978},{-3.02978,3.02978}}, rotation = -90)));
-  Modelica.Electrical.Analog.Basic.Resistor resistor4(R = Res1) annotation(Placement(visible = true, transformation(origin = {59.8962,-42.4652}, extent = {{-3.46539,-3.46539},{3.46539,3.46539}}, rotation = -90)));
-  Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {22.4824,75.4098}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-48.712,96.4871}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {23.4192,-64.1686}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {33.7237,96.0188}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.PositivePin MotorA annotation(Placement(visible = true, transformation(origin = {14.0515,7.02576}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {98.829,45.4333}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.NegativePin MotorB annotation(Placement(visible = true, transformation(origin = {31.8501,7.02576}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {98.829,-43.5597}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.BooleanInput PWM annotation(Placement(visible = true, transformation(origin = {-147.541,36.0656}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-98.8291,52.459}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.BooleanInput DIR annotation(Placement(visible = true, transformation(origin = {-142.389,-71.6628}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-96.019,-40.7495}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Sensors.VoltageSensor VAB annotation(Placement(visible = true, transformation(origin = {22.4824,26.2295}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.DCSource dcsource2(V = -5, R = 0) annotation(Placement(visible = true, transformation(origin = {-81.171,35.4567}, extent = {{10,-10},{-10,10}}, rotation = 90)));
-  Modelica.Electrical.Analog.Semiconductors.PMOS Q1(RDS = Res, Beta = Beta) annotation(Placement(visible = true, transformation(origin = {-12.6882,50.4974}, extent = {{-9.61404,-9.61404},{9.61404,9.61404}}, rotation = 0)));
-  Modelica.Electrical.Analog.Basic.Resistor resistor3(R = Res1) annotation(Placement(visible = true, transformation(origin = {-28.8417,62.7992}, extent = {{-5.45107,-5.45107},{5.45107,5.45107}}, rotation = -90)));
-  Modelica.Electrical.Analog.Semiconductors.NMOS Q2(RDS = Res, Beta = Beta) annotation(Placement(visible = true, transformation(origin = {-14.4922,-26.8791}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Semiconductors.Diode diode2 annotation(Placement(visible = true, transformation(origin = {6.14194,-26.5203}, extent = {{3.02978,-3.02978},{-3.02978,3.02978}}, rotation = -90)));
-  Modelica.Electrical.Analog.Basic.Resistor resistor1(R = Res1) annotation(Placement(visible = true, transformation(origin = {-24.9755,-49.413}, extent = {{-3.46539,-3.46539},{3.46539,3.46539}}, rotation = -90)));
-  Modelica.Electrical.Analog.Semiconductors.PMOS Q3(RDS = Res, Beta = Beta) annotation(Placement(visible = true, transformation(origin = {54.2458,49.1638}, extent = {{9.61404,-9.61404},{-9.61404,9.61404}}, rotation = 0)));
-  Modelica.Electrical.Analog.Basic.Resistor resistor2(R = Res1) annotation(Placement(visible = true, transformation(origin = {72.4507,60.7919}, extent = {{-5.45107,-5.45107},{5.45107,5.45107}}, rotation = -90)));
-  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch S3(Ron = Res1) annotation(Placement(visible = true, transformation(origin = {90.9628,44.6622}, extent = {{10,-10},{-10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch S2(Ron = Res1) annotation(Placement(visible = true, transformation(origin = {-47.3553,-31.2269}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Semiconductors.Diode diode3 annotation(Placement(visible = true, transformation(origin = {34.2468,50.0154}, extent = {{3.02978,-3.02978},{-3.02978,3.02978}}, rotation = -90)));
-  Servomechanisms.Electrical.DCSource dcsource1(V = 5, R = 0) annotation(Placement(visible = true, transformation(origin = {114.124,-45.0204}, extent = {{10,10},{-10,-10}}, rotation = 90)));
-  Modelica.Electrical.Analog.Basic.Capacitor capacitor1(C = 0.000000001) annotation(Placement(visible = true, transformation(origin = {168.618,3.74707}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Electrical.SignMagnitudDrive signmagnituddrive1 annotation(Placement(visible = true, transformation(origin = {-104.657,-7.57193}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch S1(Ron = 0) annotation(Placement(transformation(origin = {-48.0565,42.4028}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch S4(Ron = 0) annotation(Placement(transformation(origin = {82.2615,-31.1661}, extent = {{10,-10},{-10,10}})));
+  Modelica.Electrical.Analog.Semiconductors.Diode diode1 annotation(Placement(transformation(origin = {6.67484,49.5762}, extent = {{3.02978,-3.02978},{-3.02978,3.02978}}, rotation = -90)));
+  Modelica.Electrical.Analog.Semiconductors.Diode diode4 annotation(Placement(transformation(origin = {32.8514,-25.8603}, extent = {{3.02978,-3.02978},{-3.02978,3.02978}}, rotation = -90)));
+  Modelica.Electrical.Analog.Basic.Resistor resistor4(R = Res1) annotation(Placement(transformation(origin = {59.8962,-42.4652}, extent = {{-3.46539,-3.46539},{3.46539,3.46539}}, rotation = -90)));
+  Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(transformation(origin = {22.4824,75.4098}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-48.712,96.4871}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(transformation(origin = {23.4192,-64.1686}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {33.7237,96.0188}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Interfaces.PositivePin MotorA annotation(Placement(transformation(origin = {14.0515,7.02576}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {98.829,45.4333}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Interfaces.NegativePin MotorB annotation(Placement(transformation(origin = {31.8501,7.02576}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {98.829,-43.5597}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.BooleanInput PWM annotation(Placement(transformation(origin = {-147.541,36.0656}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-98.8291,52.459}, extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Interfaces.BooleanInput DIR annotation(Placement(transformation(origin = {-142.389,-71.6628}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-96.019,-40.7495}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Sensors.VoltageSensor VAB annotation(Placement(transformation(origin = {22.4824,26.2295}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Electrical.DCSource dcsource2(V = -5, R = 0) annotation(Placement(transformation(origin = {-81.171,35.4567}, extent = {{10,-10},{-10,10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Semiconductors.PMOS Q1(RDS = Res, Beta = Beta) annotation(Placement(transformation(origin = {-12.6882,50.4974}, extent = {{-9.61404,-9.61404},{9.61404,9.61404}})));
+  Modelica.Electrical.Analog.Basic.Resistor resistor3(R = Res1) annotation(Placement(transformation(origin = {-28.8417,62.7992}, extent = {{-5.45107,-5.45107},{5.45107,5.45107}}, rotation = -90)));
+  Modelica.Electrical.Analog.Semiconductors.NMOS Q2(RDS = Res, Beta = Beta) annotation(Placement(transformation(origin = {-14.4922,-26.8791}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Semiconductors.Diode diode2 annotation(Placement(transformation(origin = {6.14194,-26.5203}, extent = {{3.02978,-3.02978},{-3.02978,3.02978}}, rotation = -90)));
+  Modelica.Electrical.Analog.Basic.Resistor resistor1(R = Res1) annotation(Placement(transformation(origin = {-24.9755,-49.413}, extent = {{-3.46539,-3.46539},{3.46539,3.46539}}, rotation = -90)));
+  Modelica.Electrical.Analog.Semiconductors.PMOS Q3(RDS = Res, Beta = Beta) annotation(Placement(transformation(origin = {54.2458,49.1638}, extent = {{9.61404,-9.61404},{-9.61404,9.61404}})));
+  Modelica.Electrical.Analog.Basic.Resistor resistor2(R = Res1) annotation(Placement(transformation(origin = {72.4507,60.7919}, extent = {{-5.45107,-5.45107},{5.45107,5.45107}}, rotation = -90)));
+  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch S3(Ron = Res1) annotation(Placement(transformation(origin = {90.9628,44.6622}, extent = {{10,-10},{-10,10}})));
+  Modelica.Electrical.Analog.Ideal.IdealClosingSwitch S2(Ron = Res1) annotation(Placement(transformation(origin = {-47.3553,-31.2269}, extent = {{-10,-10},{10,10}})));
+  Modelica.Electrical.Analog.Semiconductors.Diode diode3 annotation(Placement(transformation(origin = {34.2468,50.0154}, extent = {{3.02978,-3.02978},{-3.02978,3.02978}}, rotation = -90)));
+  Servomechanisms.Electrical.DCSource dcsource1(V = 5, R = 0) annotation(Placement(transformation(origin = {114.124,-45.0204}, extent = {{10,10},{-10,-10}}, rotation = 90)));
+  Modelica.Electrical.Analog.Basic.Capacitor capacitor1(C = 0.000000001) annotation(Placement(transformation(origin = {168.618,3.74707}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Electrical.SignMagnitudDrive signmagnituddrive1 annotation(Placement(transformation(origin = {-104.657,-7.57193}, extent = {{-10,-10},{10,10}})));
 equation
   connect(signmagnituddrive1.o4,S4.control) annotation(Line(points = {{-94.657,-15.0719},{-90.8632,-15.0719},{-90.8632,-73.1954},{133.14,-73.1954},{133.14,-23.0313},{82.3448,-23.0313},{82.3448,-23.0313}}));
   connect(signmagnituddrive1.o3,S3.control) annotation(Line(points = {{-94.657,-10.0719},{-82.6603,-10.0719},{-82.6603,-88.3392},{140.081,-88.3392},{140.081,59.629},{90.8632,59.629},{90.8632,53.0035},{90.8632,53.0035}}));
@@ -100,14 +100,14 @@ This component simulates the behaviour of an h-bridge using MOSFET transistors.
 This model has 4 transistors Q1, Q2, Q3 and Q4 wich their respective diode.
 Q1 and Q4 form half bridge and Q2 and Q3 the other half bridge.<br>
 Q1 and Q3 are PMOS transistors while Q2 and Q4 are NMOS given the configuration.<br>
-The bridge is controlled using a <strong>Sign-Magnitude drive</strong> with 
+The bridge is controlled using a <strong>Sign-Magnitude drive</strong> with
 boolean inputs and outputs.
 </p>
 
 <h4>Notes</h4>
 <ul>
 <li>
-The voltage should be applied on the electrical interfaces 
+The voltage should be applied on the electrical interfaces
 (Vpos and Vneg) using an external dc source for example
 <a href=\"modelica://Servomechanisms.Electrical.DCSource\">DCSource</a>
 .
@@ -136,6 +136,6 @@ This model has a voltage sensor (real value) between MotorA and MotorB pins and
 <a href=\"modelica://Servomechanisms.Electrical.IdealHBridge\">Servomechanisms.Electrical.IdealHBridge</a>
 </dd>
 
-</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Ellipse(origin = {1.79696,-32.6562}, lineThickness = 1, extent = {{-10,10},{10,-10}}, endAngle = 360),Line(origin = {12.797,-32.6562}, points = {{0,0},{19,0}}, thickness = 1),Line(origin = {-28.203,-32.6562}, points = {{0,0},{19,0}}, thickness = 1),Text(origin = {2.50368,-32.3029}, extent = {{-10,10},{10,-10}}, textString = "M"),Line(origin = {1.79696,7.34378}, points = {{0,0},{30,0},{30,-20},{40,-30}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{30,-30},{30,-60},{40,-70}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{-30,-70},{-30,-80},{0,-80}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{0,0},{-30,0},{-30,-20},{-40,-30}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{-30,-30},{-30,-60},{-40,-70}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{30,-70},{30,-80},{0,-80}}, thickness = 1),Text(origin = {44.8809,17.0372}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "A", fontSize = 20),Text(origin = {43.9045,-81.1274}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "B", fontSize = 20),Text(origin = {-83.8308,62.5266}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "v+", fontSize = 20),Text(origin = {14.456,62.2393}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "v-", fontSize = 20),Text(origin = {-99.8447,19.2971}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "PWM", fontSize = 20),Text(origin = {-121.272,-81.3409}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "E", fontSize = 20)}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Ellipse(origin = {1.79696,-32.6562}, lineThickness = 1, extent = {{-10,10},{10,-10}}, endAngle = 360),Line(origin = {12.797,-32.6562}, points = {{0,0},{19,0}}, thickness = 1),Line(origin = {-28.203,-32.6562}, points = {{0,0},{19,0}}, thickness = 1),Text(origin = {2.50368,-32.3029}, extent = {{-10,10},{10,-10}}, textString = "M"),Line(origin = {1.79696,7.34378}, points = {{0,0},{30,0},{30,-20},{40,-30}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{30,-30},{30,-60},{40,-70}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{-30,-70},{-30,-80},{0,-80}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{0,0},{-30,0},{-30,-20},{-40,-30}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{-30,-30},{-30,-60},{-40,-70}}, thickness = 1),Line(origin = {1.79696,7.34378}, points = {{30,-70},{30,-80},{0,-80}}, thickness = 1),Text(origin = {44.8809,17.0372}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "A", fontSize = 20),Text(origin = {43.9045,-81.1274}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "B", fontSize = 20),Text(origin = {-83.8308,62.5266}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "v+", fontSize = 20),Text(origin = {14.456,62.2393}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "v-", fontSize = 20),Text(origin = {-99.8447,19.2971}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "PWM", fontSize = 20),Text(origin = {-121.272,-81.3409}, extent = {{28.2206,16.2633},{46.5125,5.69395}}, textString = "E", fontSize = 20)}));
 end HBridge;
 

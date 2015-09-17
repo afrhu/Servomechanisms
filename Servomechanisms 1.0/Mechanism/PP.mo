@@ -5,7 +5,7 @@ model PP "PP Mechanism"
   //Icon
   extends Servomechanisms.Utilities.IconNameB;
   //Inner declarations
-  inner Modelica.Mechanics.MultiBody.World world(enableAnimation = true, animateWorld = true, g = g) annotation(Placement(visible = true, transformation(origin = {-83.2282,-83.6844}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  inner Modelica.Mechanics.MultiBody.World world(enableAnimation = true, animateWorld = true, g = g) annotation(Placement(transformation(origin = {-83.2282,-83.6844}, extent = {{-10,-10},{10,10}})));
   //Parameters 1
   parameter String shape1 = "box" "shape of visualizer:\"shape\", \"box\", \"cylinder\" ";
   parameter Modelica.Mechanics.MultiBody.Types.Axis n1 = {1,0,0} "Axis of rotation resolved in frame_a (= same as in frame_b)" annotation(Evaluate = true);
@@ -63,13 +63,13 @@ model PP "PP Mechanism"
   //Other parameters
   parameter SI.Acceleration g = 9.81 "Constant gravity acceleration";
   //Components
-  Servomechanisms.Mechanism.PLink plink1(shape = shape1, n = n1, r = r1, r_CM = r_CM1, m = m1, shapeLength = shapeLength1, shapeWidth = shapeWidth1, shapeHeight = shapeHeight1, shapeType = shapeType1, extra = extra1, I_11 = I_111, I_22 = I_221, I_33 = I_331, I_21 = I_211, I_31 = I_311, I_32 = I_321, boxLength = boxLength1, boxWidth = boxWidth1, boxHeight = boxHeight1, cylinderLength = cylinderLength1, cylinderDiameter = cylinderDiameter1, density = density1) annotation(Placement(visible = true, transformation(origin = {-24.9063,11.1593}, extent = {{-24.9063,-24.9063},{24.9063,24.9063}}, rotation = 0)));
-  Modelica.Mechanics.MultiBody.Parts.Fixed fixed1 annotation(Placement(visible = true, transformation(origin = {-84.0989,11.3074}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Servomechanisms.Mechanism.PLink plink1(shape = shape1, n = n1, r = r1, r_CM = r_CM1, m = m1, shapeLength = shapeLength1, shapeWidth = shapeWidth1, shapeHeight = shapeHeight1, shapeType = shapeType1, extra = extra1, I_11 = I_111, I_22 = I_221, I_33 = I_331, I_21 = I_211, I_31 = I_311, I_32 = I_321, boxLength = boxLength1, boxWidth = boxWidth1, boxHeight = boxHeight1, cylinderLength = cylinderLength1, cylinderDiameter = cylinderDiameter1, density = density1) annotation(Placement(transformation(origin = {-24.9063,11.1593}, extent = {{-24.9063,-24.9063},{24.9063,24.9063}})));
+  Modelica.Mechanics.MultiBody.Parts.Fixed fixed1 annotation(Placement(transformation(origin = {-84.0989,11.3074}, extent = {{-10,-10},{10,10}})));
   //Interfaces
-  Modelica.Mechanics.Translational.Interfaces.Flange_a flange_p1 annotation(Placement(visible = true, transformation(origin = {-36.3958,-39.2226}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-48.4099,-53.7102}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Servomechanisms.Mechanism.PLink plink2(shape = shape2, n = n2, r = r2, r_CM = r_CM2, m = m2, shapeLength = shapeLength2, shapeWidth = shapeWidth2, shapeHeight = shapeHeight2, shapeType = shapeType2, extra = extra2, I_11 = I_112, I_22 = I_222, I_33 = I_332, I_21 = I_212, I_31 = I_312, I_32 = I_322, boxLength = boxLength2, boxWidth = boxWidth2, boxHeight = boxHeight2, cylinderLength = cylinderLength2, cylinderDiameter = cylinderDiameter2, density = density2) annotation(Placement(visible = true, transformation(origin = {64.705,11.0179}, extent = {{-24.9063,-24.9063},{24.9063,24.9063}}, rotation = 0)));
-  Modelica.Mechanics.Translational.Interfaces.Flange_a flange_p2 annotation(Placement(visible = true, transformation(origin = {53.0035,-42.0495}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {27.529,-54.592}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedrotation1(n = {0,0,1}, angle = 90) annotation(Placement(visible = true, transformation(origin = {19.0813,10.2473}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Mechanics.Translational.Interfaces.Flange_a flange_p1 annotation(Placement(transformation(origin = {-36.3958,-39.2226}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {-48.4099,-53.7102}, extent = {{-10,-10},{10,10}})));
+  Servomechanisms.Mechanism.PLink plink2(shape = shape2, n = n2, r = r2, r_CM = r_CM2, m = m2, shapeLength = shapeLength2, shapeWidth = shapeWidth2, shapeHeight = shapeHeight2, shapeType = shapeType2, extra = extra2, I_11 = I_112, I_22 = I_222, I_33 = I_332, I_21 = I_212, I_31 = I_312, I_32 = I_322, boxLength = boxLength2, boxWidth = boxWidth2, boxHeight = boxHeight2, cylinderLength = cylinderLength2, cylinderDiameter = cylinderDiameter2, density = density2) annotation(Placement(transformation(origin = {64.705,11.0179}, extent = {{-24.9063,-24.9063},{24.9063,24.9063}})));
+  Modelica.Mechanics.Translational.Interfaces.Flange_a flange_p2 annotation(Placement(transformation(origin = {53.0035,-42.0495}, extent = {{-10,-10},{10,10}}), iconTransformation(origin = {27.529,-54.592}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedrotation1(n = {0,0,1}, angle = 90) annotation(Placement(transformation(origin = {19.0813,10.2473}, extent = {{-10,-10},{10,10}})));
 equation
   connect(fixedrotation1.frame_b,plink2.frame_a) annotation(Line(points = {{29.0813,10.2473},{39.576,10.2473},{39.576,10.6007},{39.576,10.6007}}));
   connect(plink1.frame_b,fixedrotation1.frame_a) annotation(Line(points = {{0.000000000000000999201,11.1593},{9.54064,11.1593},{9.54064,10.2473},{9.54064,10.2473}}));
@@ -85,13 +85,13 @@ h4      { border-radius:8%;background-color: #D8D8D8 ;}
 
 <h4>General</h4>
 <p>
-This class models a PP mechanism. 
+This class models a PP mechanism.
 </p>
 
 <h4>Implementation</h4>
 <p>
-It uses  
-<a href=\"modelica://Servomechanisms.Mechanism.PLink\">PLink</a> 
+It uses
+<a href=\"modelica://Servomechanisms.Mechanism.PLink\">PLink</a>
 element.
 </p>
 <img src=\"modelica://Servomechanisms/Resources/Images/Mechanism/pp.png\">
@@ -100,7 +100,7 @@ element.
 <ul>
 <li>The first joint is fixed in the origin.</li>
 <li>
-By default the first prismatic joint axis is the x axis 
+By default the first prismatic joint axis is the x axis
 <pre>n=[1,0,0]</pre>
 the second joint axis is the y axis
 <pre>n=[0,1,0]</pre>
@@ -111,13 +111,13 @@ the second joint axis is the y axis
 The generalized coordinates d1 and d2 are the distances of each joint in meters.
 </li>
 <li>
-The interfaces are 
+The interfaces are
 <a href=\"modelica://Modelica.Mechanics.Rotational\">Modelica.Mechanics.Rotational</a>
 </li>
 <li>
 The mechanical parameters of each link are editable (dimensions, mass, etc)
 </li>
 </ul>
-</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {-6.89046,-56.8905}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{80,-10}}),Rectangle(origin = {30.0707,-2.61484}, rotation = 90, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{80,-10}}),Rectangle(origin = {-47.6678,-56.3251}, lineColor = {170,0,0}, fillColor = {255,65,65}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {29.2226,-51.2755}, rotation = 90, lineColor = {170,0,0}, fillColor = {255,65,65}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {13.1095,-56.6784}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{-42.6148,-2.22615}}),Rectangle(origin = {31.3537,9.90991}, rotation = 90, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{-42.6148,-2.22615}})}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {-6.89046,-56.8905}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{80,-10}}),Rectangle(origin = {30.0707,-2.61484}, rotation = 90, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{80,-10}}),Rectangle(origin = {-47.6678,-56.3251}, lineColor = {170,0,0}, fillColor = {255,65,65}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {29.2226,-51.2755}, rotation = 90, lineColor = {170,0,0}, fillColor = {255,65,65}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-25,20},{25,-20}}),Rectangle(origin = {13.1095,-56.6784}, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{-42.6148,-2.22615}}),Rectangle(origin = {31.3537,9.90991}, rotation = 90, lineColor = {0,85,255}, fillColor = {0,170,255}, fillPattern = FillPattern.HorizontalCylinder, lineThickness = 1, extent = {{-80,10},{-42.6148,-2.22615}})}));
 end PP;
 

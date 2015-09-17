@@ -8,11 +8,11 @@ class TorqueAnalysis "Torque Analysis element"
   //Parameters
   parameter Modelica.SIunits.Time period(start = 1 / 50) "Rootmeansquare Base period";
   //Components
-  Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(visible = true, transformation(origin = {0,75}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedsensor1 annotation(Placement(visible = true, transformation(origin = {0,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Sensors.AccSensor accsensor1 annotation(Placement(visible = true, transformation(origin = {0,25}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Sensors.TorqueSensor torquesensor1 annotation(Placement(visible = true, transformation(origin = {0,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Blocks.Math.RootMeanSquare rootmeansquare1(f = 1 / period) annotation(Placement(visible = true, transformation(origin = {50,-50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(transformation(origin = {0,75}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedsensor1 annotation(Placement(transformation(origin = {0,50}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Rotational.Sensors.AccSensor accsensor1 annotation(Placement(transformation(origin = {0,25}, extent = {{-10,-10},{10,10}})));
+  Modelica.Mechanics.Rotational.Sensors.TorqueSensor torquesensor1 annotation(Placement(transformation(extent = {{-10,-10},{10,10}})));
+  Modelica.Blocks.Math.RootMeanSquare rootmeansquare1(f = 1 / period) annotation(Placement(transformation(origin = {50,-50}, extent = {{-10,-10},{10,10}})));
 equation
   connect(torquesensor1.flange_b,flange_b) annotation(Line(points = {{10,0},{102.239,0},{102.239,-1.1194},{102.239,-1.1194}}));
   connect(rootmeansquare1.u,torquesensor1.tau) annotation(Line(points = {{38,-50},{-7.46269,-50},{-7.46269,-10.8209},{-7.46269,-10.8209}}));
@@ -20,7 +20,7 @@ equation
   connect(speedsensor1.flange,flange_a) annotation(Line(points = {{-10,50},{-98.5075,50},{-98.5075,-2.61194},{-98.5075,-2.61194}}));
   connect(accsensor1.flange,flange_a) annotation(Line(points = {{-10,25},{-98.5075,25},{-98.5075,-0.373134},{-98.5075,-0.373134}}));
   connect(flange_a,torquesensor1.flange_a) annotation(Line(points = {{-100,0},{-9.70149,0},{-9.70149,0.373134},{-9.70149,0.373134}}));
-  annotation(Diagram(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2})), Documentation(info = "<html>
+  annotation( Documentation(info = "<html>
 <head>
 <style type=\"text/css\">
 h4      { border-radius:8%;background-color: #D8D8D8 ;}
@@ -33,7 +33,7 @@ This element is used to measure angle, speed, acceleration, torque and RMS torqu
 </p>
 
 <h4>Implementation</h4>
-It uses several sensor form 
+It uses several sensor form
 <a href=\"modelica://Modelica\">MSL</a>
 to measure the variables between two mechanical rotational ports.
 
@@ -50,6 +50,6 @@ All the parameters are in SI units.
 <h4>Example</h4>
 <a href=\"modelica://RRTorqueAnalysis\">RRTorqueAnalysis<a>
 
-</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2,2}), graphics = {Rectangle(origin = {2.06791,17.6822}, fillColor = {255,255,255}, fillPattern = FillPattern.HorizontalCylinder, extent = {{-99.4611,32.2108},{-74.329,-67.3495}}),Rectangle(origin = {172.245,16.8342}, fillColor = {255,255,255}, fillPattern = FillPattern.HorizontalCylinder, extent = {{-99.4611,32.2108},{-74.329,-67.3495}})}));
+</html>"), Icon(coordinateSystem(extent = {{-100,-100},{100,100}}, preserveAspectRatio = true, grid = {2,2}), graphics = {Rectangle(origin = {2.06791,17.6822}, fillColor = {255,255,255}, fillPattern = FillPattern.HorizontalCylinder, extent = {{-99.4611,32.2108},{-74.329,-67.3495}}),Rectangle(origin = {172.245,16.8342}, fillColor = {255,255,255}, fillPattern = FillPattern.HorizontalCylinder, extent = {{-99.4611,32.2108},{-74.329,-67.3495}})}));
 end TorqueAnalysis;
 
