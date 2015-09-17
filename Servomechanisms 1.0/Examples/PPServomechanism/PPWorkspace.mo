@@ -13,7 +13,6 @@ equation
   connect(position2.s_ref,workspace1.y[2]) annotation(Line(points = {{-24.6829,17.561},{-65.5738,17.561},{-65.5738,-2.8103},{-65.5738,-2.8103}}));
   connect(position1.s_ref,workspace1.y[1]) annotation(Line(points = {{-26.1463,-38.0488},{-66.0422,-38.0488},{-66.0422,-3.27869},{-66.0422,-3.27869}}));
   annotation( experiment(StartTime = 0, StopTime = 1, Tolerance = 0.000001));
-  annotation(experiment(StartTime = 0, StopTime = 1, Tolerance = 0.000001));
   annotation(Documentation(info = "
 <html>
 <head>
