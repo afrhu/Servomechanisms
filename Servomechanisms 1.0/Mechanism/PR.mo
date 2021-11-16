@@ -1,7 +1,7 @@
 within Servomechanisms.Mechanism;
 model PR "PR Mechanism"
   //Imports
-  import SI = Modelica.SIunits;
+  import SI = Modelic.Units.SI;
   //Icon
   extends Servomechanisms.Utilities.IconNameB;
   //Inner declarations

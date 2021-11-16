@@ -2,7 +2,7 @@ within Servomechanisms.Mechanism;
 class RR "RR Mechanism"
   //Icon
   extends Servomechanisms.Utilities.IconNameB;
-  import SI = Modelica.SIunits;
+  import SI = Modelic.Units.SI;
   inner Modelica.Mechanics.MultiBody.World world(g = g) annotation(Placement(visible = true, transformation(origin = {-81.2721,-80.9187}, extent = {{-10,-10},{10,10}}, rotation = 0)));
   //Parameters 1
   parameter String shape1 = "box" "shape of visualizer:\"shape\", \"box\", \"cylinder\" ";

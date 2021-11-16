@@ -1,7 +1,7 @@
 within Servomechanisms.Mechanism;
 class RLink "Rotational Link"
   //Imports
-  import SI = Modelica.SIunits;
+  import SI = Modelic.Units.SI;
   //Inheritance
   extends Modelica.Mechanics.MultiBody.Interfaces.PartialTwoFrames;
   //Icon

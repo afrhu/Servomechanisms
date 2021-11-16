@@ -1,10 +1,10 @@
 within Servomechanisms.Mechanism;
 class Link "Link"
   //Imports
-  import SI = Modelica.SIunits;
+  import SI = Modelic.Units.SI;
   import ShapePath = Modelica.Mechanics.MultiBody.Parts;
   import Types = Modelica.Mechanics.MultiBody.Types;
-  import Modelica.SIunits.Conversions.to_unit1;
+  import Modelic.Units.SI.Conversions.to_unit1;
   //Inheritance
   extends Modelica.Mechanics.MultiBody.Interfaces.PartialTwoFrames;
   //Icon

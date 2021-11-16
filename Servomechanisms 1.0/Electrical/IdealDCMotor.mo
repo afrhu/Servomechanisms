@@ -1,7 +1,7 @@
 within Servomechanisms.Electrical;
 class IdealDCMotor "Ideal DC Motor"
   //Icon
-  extends Modelica.Icons.MotorIcon;
+  extends Servomechanisms.Utilities.MotorIcon;
   extends Servomechanisms.Utilities.IconName;
   //Parameters
   parameter SI.Resistance R = 0.128 "Armature Resistance";
@@ -12,7 +12,7 @@ class IdealDCMotor "Ideal DC Motor"
   //Components
   Modelica.Electrical.Analog.Basic.Resistor resistor(R = R) annotation(Placement(visible = true, transformation(origin = {-75,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
   Modelica.Electrical.Analog.Basic.Inductor inductor(L = L) annotation(Placement(visible = true, transformation(origin = {-25,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Basic.EMF emf(k = kt) annotation(Placement(visible = true, transformation(origin = {0,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
+  Modelica.Electrical.Analog.Basic.RotationalEMF emf(k = kt) annotation(Placement(visible = true, transformation(origin = {0,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
   Modelica.Mechanics.Rotational.Components.Inertia inertia(J = J) annotation(Placement(visible = true, transformation(origin = {75,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
   Modelica.Mechanics.Rotational.Components.Damper damper(d = b) annotation(Placement(visible = true, transformation(origin = {25.2927,-33.7237}, extent = {{-10,-10},{10,10}}, rotation = 90)));
   Modelica.Mechanics.Rotational.Components.Fixed fixed annotation(Placement(visible = true, transformation(origin = {24.356,-67.4473}, extent = {{-10,-10},{10,10}}, rotation = 0)));
