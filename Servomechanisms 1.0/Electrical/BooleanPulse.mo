@@ -1,13 +1,13 @@
 within Servomechanisms.Electrical;
 block BooleanPulse "Generate pulse signal of type Boolean"
   //parameter Real width(final min = Modelica.Constants.small, final max = 100) = 50 "Width of pulse in % of period";
-  parameter Modelic.Units.SI.Time period(final min = Modelica.Constants.small, start = 1) "Time for one period";
-  parameter Modelic.Units.SI.Time startTime = 0 "Time instant of first pulse";
+  parameter Modelica.Units.SI.Time period(final min = Modelica.Constants.small, start = 1) "Time for one period";
+  parameter Modelica.Units.SI.Time startTime = 0 "Time instant of first pulse";
   extends Modelica.Blocks.Interfaces.partialBooleanSource;
   Modelica.Blocks.Interfaces.RealInput u annotation(Placement(visible = true, transformation(origin = {-108.665,5.62061}, extent = {{-10,-10},{10,10}}, rotation = 0), iconTransformation(origin = {-100,0}, extent = {{-10,-10},{10,10}}, rotation = 0)));
 protected
-  Modelic.Units.SI.Time Twidth = period * u / 100 "width of one pulse" annotation(HideResult = true);
-  discrete Modelic.Units.SI.Time pulsStart "Start time of pulse" annotation(HideResult = true);
+  Modelica.Units.SI.Time Twidth = period * u / 100 "width of one pulse" annotation(HideResult = true);
+  discrete Modelica.Units.SI.Time pulsStart "Start time of pulse" annotation(HideResult = true);
 initial equation
   pulsStart = startTime;
 equation

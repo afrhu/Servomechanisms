@@ -1,7 +1,7 @@
 within Servomechanisms.Mechanism;
 model PLink "Prismatic Link"
   //Imports
-  import SI = Modelic.Units.SI;
+  import SI = Modelica.Units.SI;
   //Inheritance
   extends Modelica.Mechanics.MultiBody.Interfaces.PartialTwoFrames;
   //Icon

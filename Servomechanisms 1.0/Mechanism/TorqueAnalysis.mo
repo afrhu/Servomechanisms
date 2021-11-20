@@ -6,7 +6,7 @@ class TorqueAnalysis "Torque Analysis element"
   //Inheritance
   extends Modelica.Mechanics.Rotational.Interfaces.PartialTwoFlanges;
   //Parameters
-  parameter Modelic.Units.SI.Time period(start = 1 / 50) "Rootmeansquare Base period";
+  parameter Modelica.Units.SI.Time period(start = 1 / 50) "Rootmeansquare Base period";
   //Components
   Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(visible = true, transformation(origin = {0,75}, extent = {{-10,-10},{10,10}}, rotation = 0)));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedsensor1 annotation(Placement(visible = true, transformation(origin = {0,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));

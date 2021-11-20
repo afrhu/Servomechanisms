@@ -5,7 +5,7 @@ model ForceAnalysis
   extends Servomechanisms.Utilities.IconName;
   extends Modelica.Mechanics.Translational.Interfaces.PartialTwoFlanges;
   //Parameters
-  parameter Modelic.Units.SI.Time period(start = 1 / 50) "Rootmeansquare Base frequency";
+  parameter Modelica.Units.SI.Time period(start = 1 / 50) "Rootmeansquare Base frequency";
   //Components
   Modelica.Mechanics.Translational.Sensors.PositionSensor positionsensor1 annotation(Placement(visible = true, transformation(origin = {0,75}, extent = {{-10,-10},{10,10}}, rotation = 0)));
   Modelica.Mechanics.Translational.Sensors.SpeedSensor speedsensor1 annotation(Placement(visible = true, transformation(origin = {0,50}, extent = {{-10,-10},{10,10}}, rotation = 0)));
